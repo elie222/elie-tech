@@ -1,8 +1,9 @@
 import * as React from "react"
 import styled from "@emotion/styled"
+import { withPrefix } from "gatsby"
 
 const Background = styled.div`
-  background-image: url('/images/header-background.svg');
+  background-image: url(${withPrefix("/static/images/header-background.svg")});
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
