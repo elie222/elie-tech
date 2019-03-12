@@ -1,9 +1,6 @@
 const path = require("path");
-const genDefaultConfig = require("@storybook/react/dist/server/config/defaults/webpack.config.js");
 
-module.exports = (baseConfig, env) => {
-  const config = genDefaultConfig(baseConfig, env);
-
+module.exports = ({ config, mode }) => {
   // Add typescript loader
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
@@ -22,6 +19,9 @@ module.exports = (baseConfig, env) => {
     loader: require.resolve("raw-loader")
   });
   config.resolve.extensions.push(".md");
+
+  // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
+  config.resolve.mainFields = ["browser", "module", "main"];
 
   return config;
 };
