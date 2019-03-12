@@ -1,6 +1,6 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "extends": ["tslint:recommended"],
   "jsRules": {},
   "rules": {
     "semicolon": [true, "never"],
@@ -9,12 +9,10 @@
     "member-access": false,
     "object-literal-sort-keys": false,
     "no-console": false,
-    "jsx-boolean-value": false,
     "interface-name": false,
     "curly": false,
     "no-empty-interface": false,
-    "member-ordering": false,
-    "jsx-no-lambda": false
+    "member-ordering": false
   },
   "rulesDirectory": []
 }
