@@ -18,10 +18,8 @@ const Button = styled.button`
   }
 `
 
-interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
-  text: string
-}
+interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {}
 
 export default (props: ButtonProps) => {
-  return <Button>{props.text}</Button>
+  return <Button>{props.children}</Button>
 }
