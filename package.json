@@ -148,7 +148,7 @@
       "git add"
     ],
     "*.{js,jsx}": [
-      "prettier --fix",
+      "xo --fix",
       "git add"
     ],
     "*.md": [
@@ -163,6 +163,8 @@
   "xo": {
     "extends": "xo-react/space",
     "space": true,
+    "semicolon": false,
+    "prettier": true,
     "rules": {
       "no-case-declarations": 0,
       "default-case": 0
