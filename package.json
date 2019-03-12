@@ -24,6 +24,7 @@
     "codeclimate": "codeclimate-test-reporter < coverage/lcov.info"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
     "@types/lodash": "^4.14.116",
     "@types/reach__router": "^1.0.1",
@@ -39,6 +40,7 @@
     "emotion": "^10.0.9",
     "gatsby": "^2.1.30",
     "gatsby-link": "^2.0.15",
+    "gatsby-plugin-emotion": "^4.0.6",
     "gatsby-plugin-glamor": "^2.0.9",
     "gatsby-plugin-google-analytics": "^2.0.17",
     "gatsby-plugin-manifest": "2.0.23",
@@ -82,6 +84,7 @@
     "@types/storybook__addon-options": "^3.2.0",
     "@types/storybook__react": "^3.0.5",
     "@types/webpack-env": "^1.13.1",
+    "babel-plugin-emotion": "^10.0.9",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-16": "^1.0.0",
     "eslint": "^4.1.1",
