@@ -1,15 +1,15 @@
 import { render, configure } from "enzyme"
 import "jest"
 import * as React from "react"
-import Button from "./Button"
+import SubHeading from "./SubHeading"
 
 // Configure enzyme with react 16 adapter
 const Adapter: any = require("enzyme-adapter-react-16")
 configure({ adapter: new Adapter() })
 
-describe("Button component", () => {
+describe("SubHeading component", () => {
   it("should render correctly", () => {
-    const wrapper = render(<Button>Click me!</Button>)
+    const wrapper = render(<SubHeading />)
     expect(wrapper).toMatchSnapshot()
   })
 })

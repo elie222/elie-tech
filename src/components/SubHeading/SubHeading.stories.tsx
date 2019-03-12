@@ -1,12 +1,12 @@
 /* tslint:disable no-var-requires */
 const withReadme = (require("storybook-readme/with-readme") as any).default
-const ButtonReadme = require("./README.md")
+const SubHeadingReadme = require("./README.md")
 
 import * as React from "react"
 import { storiesOf } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
-import Button from "./Button"
+import SubHeading from "./SubHeading"
 
-storiesOf("Button", module)
-  .addDecorator(withReadme(ButtonReadme))
-  .add("default", () => <Button>GET IN TOUCH</Button>)
+storiesOf("SubHeading", module)
+  .addDecorator(withReadme(SubHeadingReadme))
+  .add("default", () => <SubHeading>SubHeading</SubHeading>)
