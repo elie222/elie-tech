@@ -148,7 +148,7 @@
       "git add"
     ],
     "*.{js,jsx}": [
-      "xo --fix",
+      "prettier --fix",
       "git add"
     ],
     "*.md": [
