@@ -5,6 +5,6 @@ import Header from "../components/Header/Header"
 export default () => (
   <div>
     <Header />
-    <Button text="GET IN TOUCH" />
+    <Button>GET IN TOUCH</Button>
   </div>
 )
