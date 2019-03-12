@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Header, Container, Segment, Icon } from "semantic-ui-react";
-import {withLayout} from "../components/Layout";
+import * as React from "react"
+import { Header, Container, Segment, Icon } from "semantic-ui-react"
+import {withLayout} from "../components/Layout"
 
 const AboutPage = () => {
   return (
@@ -26,7 +26,7 @@ const AboutPage = () => {
         </p>
       </Segment>
     </Container>
-  );
-};
+  )
+}
 
-export default withLayout(AboutPage);
+export default withLayout(AboutPage)

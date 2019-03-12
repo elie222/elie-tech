@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Header, Icon, Grid } from "semantic-ui-react";
-import {withLayout} from "../components/Layout";
+import * as React from "react"
+import { Header, Icon, Grid } from "semantic-ui-react"
+import {withLayout} from "../components/Layout"
 
 const NotFoundPage = () =>
     <Grid centered verticalAlign="middle"
@@ -15,6 +15,6 @@ const NotFoundPage = () =>
           <Header as="h2">But nothing found for you #404</Header>
         </Grid.Row>
       </Grid.Column>
-    </Grid>;
+    </Grid>
 
-export default withLayout(NotFoundPage);
+export default withLayout(NotFoundPage)

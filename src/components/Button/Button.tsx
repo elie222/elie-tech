@@ -1,5 +1,5 @@
-import * as React from "react";
-import styled from "@emotion/styled";
+import * as React from "react"
+import styled from "@emotion/styled"
 
 const Button = styled.button`
   border-radius: 5px;
@@ -16,12 +16,12 @@ const Button = styled.button`
     background-color: #288ade;
     color: white;
   }
-`;
+`
 
 interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
-  text: string;
+  text: string
 }
 
 export default (props: ButtonProps) => {
-  return <Button>{props.text}</Button>;
-};
+  return <Button>{props.text}</Button>
+}

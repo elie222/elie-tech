@@ -1,17 +1,17 @@
 /* eslint-disable no-undef, max-nested-callbacks */
-jest.mock('path');
-const {createPages, onCreateNode} = require('../gatsby-node');
+jest.mock('path')
+const {createPages, onCreateNode} = require('../gatsby-node')
 
 describe('gatsby-node', () => {
-  const actions = {};
+  const actions = {}
 
   describe('createPages', () => {
-    let graphql;
+    let graphql
 
     beforeEach(() => {
-      actions.createPage = jest.fn();
-      graphql = jest.fn();
-    });
+      actions.createPage = jest.fn()
+      graphql = jest.fn()
+    })
 
     it('should create blog posts', () => {
       graphql.mockReturnValueOnce(
@@ -53,22 +53,22 @@ describe('gatsby-node', () => {
             }
           }
         )
-      );
+      )
 
       return createPages({graphql, actions})
         .then(() => {
-          expect(actions.createPage.mock.calls).toMatchSnapshot();
-        });
-    });
+          expect(actions.createPage.mock.calls).toMatchSnapshot()
+        })
+    })
 
     it('should throw an error on graphql error', () => {
       graphql.mockReturnValueOnce(
         Promise.resolve({errors: 'something wrong!'})
-      );
+      )
 
       expect(createPages({graphql, actions}))
-        .toThrow();
-    });
+        .toThrow()
+    })
 
     it('should create tags pages', () => {
       graphql.mockReturnValueOnce(
@@ -129,13 +129,13 @@ describe('gatsby-node', () => {
             }
           }
         )
-      );
+      )
 
       return createPages({graphql, actions})
         .then(() => {
-          expect(actions.createPage.mock.calls).toMatchSnapshot();
-        });
-    });
+          expect(actions.createPage.mock.calls).toMatchSnapshot()
+        })
+    })
 
     describe('pagination', () => {
       const generateData = n => {
@@ -145,83 +145,83 @@ describe('gatsby-node', () => {
               slug: `/blog/2017-04-18--article-${i + 1}/`
             }
           }
-        }));
+        }))
 
-        return {data: {posts: {edges}}};
-      };
+        return {data: {posts: {edges}}}
+      }
 
       it('should create 1 page with 5 posts', () => {
-        graphql.mockReturnValueOnce(Promise.resolve(generateData(5)));
+        graphql.mockReturnValueOnce(Promise.resolve(generateData(5)))
         return createPages({graphql, actions})
           .then(() => {
             const pages = actions.createPage.mock.calls
-              .filter(d => d[0].path && d[0].path.startsWith('/blog/page/'));
-            expect(pages).toMatchSnapshot();
-          });
-      });
+              .filter(d => d[0].path && d[0].path.startsWith('/blog/page/'))
+            expect(pages).toMatchSnapshot()
+          })
+      })
 
       it('should create 2 pages with 15 posts', () => {
-        graphql.mockReturnValueOnce(Promise.resolve(generateData(15)));
+        graphql.mockReturnValueOnce(Promise.resolve(generateData(15)))
         return createPages({graphql, actions})
           .then(() => {
             const pages = actions.createPage.mock.calls
-              .filter(d => d[0].path && d[0].path.startsWith('/blog/page/'));
-            expect(pages).toMatchSnapshot();
-          });
-      });
+              .filter(d => d[0].path && d[0].path.startsWith('/blog/page/'))
+            expect(pages).toMatchSnapshot()
+          })
+      })
 
       it('should create 3 pages with 30 posts', () => {
-        graphql.mockReturnValueOnce(Promise.resolve(generateData(30)));
+        graphql.mockReturnValueOnce(Promise.resolve(generateData(30)))
         return createPages({graphql, actions})
           .then(() => {
             const pages = actions.createPage.mock.calls
-              .filter(d => d[0].path && d[0].path.startsWith('/blog/page/'));
-            expect(pages).toMatchSnapshot();
-          });
-      });
-    });
-  });
+              .filter(d => d[0].path && d[0].path.startsWith('/blog/page/'))
+            expect(pages).toMatchSnapshot()
+          })
+      })
+    })
+  })
 
   describe('onCreateNode', () => {
-    let getNode;
+    let getNode
 
     beforeEach(() => {
-      actions.createNodeField = jest.fn();
-      getNode = jest.fn();
-    });
+      actions.createNodeField = jest.fn()
+      getNode = jest.fn()
+    })
 
     it('should create slugs for MarkdownRemark file', () => {
       getNode.mockReturnValue(
         {
           relativePath: 'blog/2017-04-18--welcoming/index.md'
         }
-      );
+      )
       const node = {
         internal: {
           type: 'MarkdownRemark'
         },
         parent: 'parent'
-      };
-      onCreateNode({node, actions, getNode});
+      }
+      onCreateNode({node, actions, getNode})
 
-      expect(actions.createNodeField.mock.calls).toMatchSnapshot();
-    });
+      expect(actions.createNodeField.mock.calls).toMatchSnapshot()
+    })
 
     it('should do nothing on unknown type', () => {
       getNode.mockReturnValue(
         {
           relativePath: 'blog/2017-04-18--welcoming/index.md'
         }
-      );
+      )
       const node = {
         internal: {
           type: 'unknown'
         },
         parent: 'parent'
-      };
-      onCreateNode({node, actions, getNode});
+      }
+      onCreateNode({node, actions, getNode})
 
-      expect(actions.createNodeField.mock.calls.length).toBe(0);
-    });
-  });
-});
+      expect(actions.createNodeField.mock.calls.length).toBe(0)
+    })
+  })
+})

@@ -1,4 +1,4 @@
-const {inputRequired} = require('./utils');
+const {inputRequired} = require('./utils')
 
 module.exports = plop => {
   plop.setGenerator('page', {
@@ -17,5 +17,5 @@ module.exports = plop => {
         templateFile: 'templates/page-tsx.template'
       }
     ]
-  });
-};
+  })
+}

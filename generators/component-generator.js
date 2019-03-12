@@ -1,8 +1,8 @@
-const unflatten = require('flat').unflatten;
-const {pascalCase, sentenceCase} = require('change-case');
-const {inputRequired, addWithCustomData} = require('./utils');
+const unflatten = require('flat').unflatten
+const {pascalCase, sentenceCase} = require('change-case')
+const {inputRequired, addWithCustomData} = require('./utils')
 
-const MAX_PROPS = 10;
+const MAX_PROPS = 10
 
 const propsPrompts = [];
 [...Array(MAX_PROPS)].forEach((v, i) => {
@@ -33,11 +33,11 @@ const propsPrompts = [];
       message: 'Props is required?',
       when: data => data._props
     }
-  );
-});
+  )
+})
 
 module.exports = plop => {
-  plop.addHelper('propsHelper', text => `{${text}}`);
+  plop.addHelper('propsHelper', text => `{${text}}`)
   plop.setGenerator('component', {
     prompts: [
       {
@@ -78,20 +78,20 @@ module.exports = plop => {
     ],
     actions: data => {
       // Parse data for easy templating
-      data = unflatten(data);
-      data.props = data.props || [];
+      data = unflatten(data)
+      data.props = data.props || []
       data.haveRequiredProps = data.props.reduce(
         (mem, prop) => mem || prop.required,
         false
-      );
+      )
 
       data.props = data.props.map(prop =>
         Object.assign({}, prop, {optional: !prop.required})
-      );
+      )
 
       const basePath = data.files.length ?
         '../src/components/{{pascalCase name}}/' :
-        '../src/components/';
+        '../src/components/'
 
       const actions = [];
 
@@ -109,12 +109,12 @@ module.exports = plop => {
       ].forEach(a => {
         if (data.files.includes(a.condition)) {
           a.actions.forEach(i => {
-            actions.push(addWithCustomData(plop, i, data));
-          });
+            actions.push(addWithCustomData(plop, i, data))
+          })
         }
-      });
+      })
 
-      return actions;
+      return actions
     }
-  });
-};
+  })
+}
