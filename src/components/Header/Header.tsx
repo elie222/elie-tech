@@ -1,9 +1,12 @@
 import * as React from "react"
 import styled from "@emotion/styled"
-import headerBackground from "./header-background.svg"
+// not working with SB :(
+// import headerBackground from "./header-background.svg"
+// import headerBackground from './header-background.png'
+// background-image: url(${headerBackground});
 
 const Background = styled.div`
-  background-image: url(${headerBackground});
+  background: #288ade;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
