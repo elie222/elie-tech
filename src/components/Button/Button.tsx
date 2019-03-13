@@ -5,7 +5,7 @@ const Button = styled.button`
   border-radius: 5px;
   border: solid 3px #288ade;
   background-color: transparent;
-  font-family: TitilliumWeb;
+  font-family: Titillium Web;
   font-size: 28px;
   font-weight: 600;
   letter-spacing: 2.8px;

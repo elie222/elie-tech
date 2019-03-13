@@ -1,7 +1,6 @@
 /* tslint:disable no-var-requires */
 const withReadme = (require("storybook-readme/with-readme") as any).default
 const ArticleItemReadme = require("./README.md")
-// require("../../css/reset.css")
 
 import * as React from "react"
 import { storiesOf } from "@storybook/react"
