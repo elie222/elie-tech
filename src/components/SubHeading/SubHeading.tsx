@@ -7,6 +7,7 @@ const H2 = styled.h2`
   font-weight: 600;
   letter-spacing: 2px;
   color: #000000;
+  text-align: center;
 `
 
 export default (props: any) => {
