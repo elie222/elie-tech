@@ -1,9 +1,12 @@
 import * as React from "react"
+import "typeface-open-sans"
+import "typeface-titillium-web"
 import Button from "../components/Button/Button"
 import Header from "../components/Header/Header"
 import SubHeading from "../components/SubHeading/SubHeading"
 import TechnologyItem from "../components/TechnologyItem/TechnologyItem"
 import ArticleItem from "../components/ArticleItem/ArticleItem"
+import "../css/reset.css"
 
 const technologies = [
   { title: "JavaScript", image: "/images/react" },
