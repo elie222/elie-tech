@@ -19,8 +19,16 @@ storiesOf("ArticleItem", module)
     const date: Date = new Date()
     const tags: string[] = ["JavaScript", "Meteor"]
     const image: string = "/images/TODO"
+    const likes = 186
 
     return (
-      <ArticleItem title={title} description={description} date={date} tags={tags} image={image} />
+      <ArticleItem
+        title={title}
+        description={description}
+        date={date}
+        tags={tags}
+        image={image}
+        likes={likes}
+      />
     )
   })
