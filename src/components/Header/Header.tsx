@@ -1,8 +1,9 @@
 import * as React from "react"
 import styled from "@emotion/styled"
+import headerBackground from "./header-background.svg"
 
 const Background = styled.div`
-  background-image: url('/static/images/header-background.svg');
+  background-image: url(${headerBackground});
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
