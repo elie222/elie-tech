@@ -21,6 +21,8 @@ const withImagePrefix = (items: any[]) => {
   }))
 }
 
+const contact = () => window.open("mailto:elie@dappworks.co", "_blank")
+
 export default () => (
   <div>
     <Header />
@@ -42,7 +44,7 @@ export default () => (
     </Section>
     <Section coloredBackground>
       <SubHeading>Videos</SubHeading>
-      <Button>GET IN TOUCH</Button>
+      <Button onClick={contact}>GET IN TOUCH</Button>
     </Section>
     <Footer>2019 © Steinbock Software Limited</Footer>
   </div>

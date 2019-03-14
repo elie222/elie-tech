@@ -3,7 +3,9 @@ import styled from "@emotion/styled"
 
 const Wrapper = styled.div<SectionProps>`
   padding: 40px 150px 42px;
-  // text-align: center;
+  @media (max-width: 600px) {
+    padding: 40px 10px 42px;
+  }
   ${(props) => props.coloredBackground && "background-color: #f4f7f6;"}
   display: flex;
   flex-direction: column;
