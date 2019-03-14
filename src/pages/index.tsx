@@ -1,4 +1,5 @@
 import * as React from "react"
+import { withPrefix } from "gatsby"
 import "typeface-open-sans"
 import "typeface-titillium-web"
 import Button from "../components/Button/Button"
@@ -9,81 +10,35 @@ import ArticleList from "../components/ArticleList/ArticleList"
 import "../css/reset.css"
 import Section from "../components/Section/Section"
 import Footer from "../components/Footer/Footer"
+import technologies from "../../data/technologies.json"
+import projects from "../../data/projects.json"
+import articles from "../../data/articles.json"
 
-const technologies = [
-  { title: "JavaScript", image: "/images/react" },
-  { title: "TypeScript", image: "/images/react" },
-  { title: "React", image: "/images/react" },
-  { title: "MongoDB", image: "/images/react" },
-  { title: "Elixir", image: "/images/react" },
-  { title: "Solidity", image: "/images/react" },
-  { title: "Ansible", image: "/images/react" },
-  { title: "Docker", image: "/images/react" },
-]
-
-const projects = [
-  { title: "Mercedes-Benz", image: "/images/react" },
-  { title: "Draft Fantasy", image: "/images/react" },
-  { title: "CryptoFighters", image: "/images/react" },
-]
-
-const now = new Date()
-
-const articles = [
-  {
-    title: "Scaling Meteor",
-    image: "article-images/meteor.png",
-    description: "Some nice description about the article.",
-    date: now,
-    tags: ["javascript"],
-    likes: 86,
-  },
-  {
-    title: "TS tricks",
-    image: "/images/react",
-    description: "Some nice description about the article.",
-    date: now,
-    tags: ["javascript"],
-    likes: 86,
-  },
-  {
-    title: "CryptoFighters",
-    image: "/images/react",
-    description: "Some nice description about the article.",
-    date: now,
-    tags: ["javascript"],
-    likes: 86,
-  },
-]
+const withImagePrefix = (items: any[]) => {
+  return items.map((item) => ({
+    ...item,
+    image: withPrefix(item.image),
+  }))
+}
 
 export default () => (
   <div>
     <Header />
     <Section>
       <SubHeading>Favourite Technologies</SubHeading>
-      {technologies.map(({ title, image }) => (
+      {withImagePrefix(technologies).map(({ title, image }: any) => (
         <TechnologyItem key={title} title={title} image={image} />
       ))}
     </Section>
     <Section coloredBackground>
       <SubHeading>Previous Projects</SubHeading>
-      {projects.map(({ title, image }) => (
+      {withImagePrefix(projects).map(({ title, image }: any) => (
         <TechnologyItem key={title} title={title} image={image} />
       ))}
     </Section>
     <Section>
       <SubHeading>Articles</SubHeading>
-      <ArticleList articles={articles} />
-      {/* {articles.map(({ title, image, description, date, tags, likes }) => (
-      <ArticleItem
-        title={title}
-        image={image}
-        description={description}
-        date={date}
-        tags={tags}
-        likes={likes}
-      />
-    ))} */}
+      <ArticleList articles={withImagePrefix(articles)} />
     </Section>
     <Section coloredBackground>
       <SubHeading>Videos</SubHeading>

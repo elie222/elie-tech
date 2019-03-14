@@ -1,0 +1,10 @@
+[
+  { "title": "JavaScript", "image": "/images/react" },
+  { "title": "TypeScript", "image": "/images/react" },
+  { "title": "React", "image": "/images/react" },
+  { "title": "MongoDB", "image": "/images/react" },
+  { "title": "Elixir", "image": "/images/react" },
+  { "title": "Solidity", "image": "/images/react" },
+  { "title": "Ansible", "image": "/images/react" },
+  { "title": "Docker", "image": "/images/react" }
+]

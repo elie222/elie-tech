@@ -1,9 +1,23 @@
 [
   {
-    "id": "Fabien BERNARD",
-    "bio": "JavaScript Developer with ♥ #Craftman #Lean #JS #FRP. Member at @GatsbyJS.",
-    "avatar": "avatars/fabien0102.jpg",
-    "twitter": "@fabien0102",
-    "github": "@fabien0102"
+    "title": "Scaling Meteor",
+    "image": "article-images/meteor.png",
+    "description": "Some nice description about the article.",
+    "tags": ["javascript"],
+    "likes": 86
+  },
+  {
+    "title": "TS tricks",
+    "image": "article-images/typescript.jpeg",
+    "description": "Some nice description about the article.",
+    "tags": ["javascript"],
+    "likes": 86
+  },
+  {
+    "title": "CryptoFighters",
+    "image": "article-images/cryptofighters-arena.png",
+    "description": "Some nice description about the article.",
+    "tags": ["javascript"],
+    "likes": 86
   }
 ]

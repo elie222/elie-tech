@@ -19,7 +19,7 @@ export default (props: ArticleListProps) => {
           title={title}
           image={image}
           description={description}
-          date={date}
+          date={date || new Date()}
           tags={tags}
           likes={likes}
         />
