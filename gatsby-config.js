@@ -4,9 +4,6 @@ module.exports = {
     googleVerification: `abcdefz`,
     disqus: `gatsby-typescript`
   },
-  mapping: {
-    'MarkdownRemark.frontmatter.author': `AuthorJson`
-  },
   plugins: [
     // Expose `/data` to graphQL layer
     {

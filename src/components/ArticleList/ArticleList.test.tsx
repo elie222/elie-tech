@@ -9,7 +9,7 @@ configure({ adapter: new Adapter() })
 
 describe("ArticleList component", () => {
   it("should render correctly", () => {
-    const wrapper = render(<ArticleList />)
+    const wrapper = render(<ArticleList articles={[]} />)
     expect(wrapper).toMatchSnapshot()
   })
 })
