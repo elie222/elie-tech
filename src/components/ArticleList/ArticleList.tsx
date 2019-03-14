@@ -1,5 +1,10 @@
 import * as React from "react"
+import styled from "@emotion/styled"
 import ArticleItem, { ArticleItemProps } from "../ArticleItem/ArticleItem"
+
+const Wrapper = styled.div`
+  width: 100%;
+`
 
 interface ArticleListProps {
   articles: ArticleItemProps[]
@@ -7,7 +12,7 @@ interface ArticleListProps {
 
 export default (props: ArticleListProps) => {
   return (
-    <div>
+    <Wrapper>
       {props.articles.map(({ title, image, description, date, tags, likes }) => (
         <ArticleItem
           key={title}
@@ -19,6 +24,6 @@ export default (props: ArticleListProps) => {
           likes={likes}
         />
       ))}
-    </div>
+    </Wrapper>
   )
 }

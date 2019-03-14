@@ -21,6 +21,7 @@ const Brand = styled.div`
 const H1 = styled.h1`
   font-family: OpenSans;
   font-size: 36px;
+  line-height: 1.42857em;
   color: #ffffff;
   padding: 60px 150px 106px;
 `
@@ -30,7 +31,9 @@ export default () => {
     <Background>
       <Brand>elie.tech</Brand>
       <H1>
-        Hey, my name is Eliezer Steinbock. I’m a full stack freelance developer living in Tel Aviv.
+        Hey, my name is Eliezer Steinbock.
+        <br />
+        I’m a full stack freelance developer living in Tel Aviv.
       </H1>
     </Background>
   )

@@ -8,6 +8,7 @@ import TechnologyItem from "../components/TechnologyItem/TechnologyItem"
 import ArticleList from "../components/ArticleList/ArticleList"
 import "../css/reset.css"
 import Section from "../components/Section/Section"
+import Footer from "../components/Footer/Footer"
 
 const technologies = [
   { title: "JavaScript", image: "/images/react" },
@@ -88,5 +89,6 @@ export default () => (
       <SubHeading>Videos</SubHeading>
       <Button>GET IN TOUCH</Button>
     </Section>
+    <Footer>2019 © Steinbock Software Limited</Footer>
   </div>
 )

@@ -11,6 +11,7 @@ const H2 = styled.h2`
   padding-bottom: 7px;
   border-bottom: 2px solid #000000;
   display: inline-block;
+  margin-bottom: 40px;
 `
 
 export default (props: any) => {
