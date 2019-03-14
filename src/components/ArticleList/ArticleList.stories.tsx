@@ -2,6 +2,8 @@ import * as React from "react"
 import { storiesOf } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 import ArticleList from "./ArticleList"
+// webpack problems
+// import articles from "../../../data/articles.json"
 
 const now = new Date()
 
