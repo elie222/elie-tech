@@ -103,8 +103,7 @@ module.exports = plop => {
           {path: `${basePath}{{pascalCase name}}.test.tsx`, templateFile: 'templates/component-test-tsx.template'}
         ]},
         {condition: 'stories', actions: [
-          {path: `${basePath}{{pascalCase name}}.stories.tsx`, templateFile: 'templates/component-stories-tsx.template'},
-          {path: `${basePath}README.md`, templateFile: 'templates/component-readme-md.template'}
+          {path: `${basePath}{{pascalCase name}}.stories.tsx`, templateFile: 'templates/component-stories-tsx.template'}
         ]}
       ].forEach(a => {
         if (data.files.includes(a.condition)) {

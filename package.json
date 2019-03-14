@@ -103,7 +103,6 @@
     "react-test-renderer": "16",
     "remark-cli": "^3.0.1",
     "remark-preset-lint-recommended": "^2.0.0",
-    "storybook-readme": "^3.0.6",
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0",
     "ts-jest": "19.0.8",
