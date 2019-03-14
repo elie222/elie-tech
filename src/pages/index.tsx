@@ -5,8 +5,9 @@ import Button from "../components/Button/Button"
 import Header from "../components/Header/Header"
 import SubHeading from "../components/SubHeading/SubHeading"
 import TechnologyItem from "../components/TechnologyItem/TechnologyItem"
-import ArticleItem from "../components/ArticleItem/ArticleItem"
+import ArticleList from "../components/ArticleList/ArticleList"
 import "../css/reset.css"
+import Section from "../components/Section/Section"
 
 const technologies = [
   { title: "JavaScript", image: "/images/react" },
@@ -30,7 +31,7 @@ const now = new Date()
 const articles = [
   {
     title: "Scaling Meteor",
-    image: "/images/react",
+    image: "article-images/meteor.png",
     description: "Some nice description about the article.",
     date: now,
     tags: ["javascript"],
@@ -57,16 +58,22 @@ const articles = [
 export default () => (
   <div>
     <Header />
-    <SubHeading>Favourite Technologies</SubHeading>
-    {technologies.map(({ title, image }) => (
-      <TechnologyItem title={title} image={image} />
-    ))}
-    <SubHeading>Previous Projects</SubHeading>
-    {projects.map(({ title, image }) => (
-      <TechnologyItem title={title} image={image} />
-    ))}
-    <SubHeading>Articles</SubHeading>
-    {articles.map(({ title, image, description, date, tags, likes }) => (
+    <Section>
+      <SubHeading>Favourite Technologies</SubHeading>
+      {technologies.map(({ title, image }) => (
+        <TechnologyItem key={title} title={title} image={image} />
+      ))}
+    </Section>
+    <Section coloredBackground>
+      <SubHeading>Previous Projects</SubHeading>
+      {projects.map(({ title, image }) => (
+        <TechnologyItem key={title} title={title} image={image} />
+      ))}
+    </Section>
+    <Section>
+      <SubHeading>Articles</SubHeading>
+      <ArticleList articles={articles} />
+      {/* {articles.map(({ title, image, description, date, tags, likes }) => (
       <ArticleItem
         title={title}
         image={image}
@@ -75,8 +82,11 @@ export default () => (
         tags={tags}
         likes={likes}
       />
-    ))}
-    <SubHeading>Videos</SubHeading>
-    <Button>GET IN TOUCH</Button>
+    ))} */}
+    </Section>
+    <Section coloredBackground>
+      <SubHeading>Videos</SubHeading>
+      <Button>GET IN TOUCH</Button>
+    </Section>
   </div>
 )

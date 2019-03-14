@@ -8,8 +8,15 @@ const H2 = styled.h2`
   letter-spacing: 2px;
   color: #000000;
   text-align: center;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #000000;
+  display: inline-block;
 `
 
 export default (props: any) => {
-  return <H2>{props.children}</H2>
+  return (
+    <div>
+      <H2>{props.children}</H2>
+    </div>
+  )
 }

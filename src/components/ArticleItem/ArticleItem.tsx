@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   background-color: #f4f7f6;
   font-family: Open Sans;
   color: #000000;
+  margin-bottom: 30px;
 `
 const Image = styled.img`
   width: 364px;
@@ -40,7 +41,7 @@ const Tags = styled.div`
 `
 const PostedAt = styled.div``
 
-interface ArticleItemProps extends React.HTMLProps<HTMLDivElement> {
+export interface ArticleItemProps extends React.HTMLProps<HTMLDivElement> {
   title: string
   description: string
   image: string
@@ -52,7 +53,7 @@ interface ArticleItemProps extends React.HTMLProps<HTMLDivElement> {
 export default (props: ArticleItemProps) => {
   return (
     <Wrapper>
-      <Image />
+      <Image src={props.image} />
       <Main>
         <Title>{props.title}</Title>
         <Description>{props.title}</Description>
