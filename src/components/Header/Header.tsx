@@ -23,7 +23,7 @@ const H1 = styled.h1`
   font-size: 36px;
   line-height: 1.42857em;
   color: #ffffff;
-  padding: 60px 150px 106px;
+  padding: 60px 10% 106px;
 `
 
 export default () => {

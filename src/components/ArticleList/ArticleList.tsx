@@ -13,7 +13,7 @@ interface ArticleListProps {
 export default (props: ArticleListProps) => {
   return (
     <Wrapper>
-      {props.articles.map(({ title, image, description, date, tags, likes }) => (
+      {props.articles.map(({ title, image, description, date, tags, likes, link }) => (
         <ArticleItem
           key={title}
           title={title}
@@ -22,6 +22,7 @@ export default (props: ArticleListProps) => {
           date={date || new Date()}
           tags={tags}
           likes={likes}
+          link={link}
         />
       ))}
     </Wrapper>

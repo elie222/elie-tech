@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled from "@emotion/styled"
 
-const Wrapper = styled.div`
+const Wrapper = styled.a`
   display: flex;
   border-radius: 5px;
   border: solid 1px #ececec;
@@ -9,10 +9,24 @@ const Wrapper = styled.div`
   font-family: Open Sans;
   color: #000000;
   margin-bottom: 30px;
+  line-height: 1.42857em;
+  height: 200px;
+  cursor: pointer;
+  text-decoration: none;
+
+  :hover {
+    border: solid 1px #288ade;
+  }
 `
 const Image = styled.img`
   width: 364px;
-  height: 202px;
+  object-fit: cover;
+  @media (max-width: 1000px) {
+    width: 250px;
+  }
+  @media (max-width: 600px) {
+    width: 150px;
+  }
 `
 const Main = styled.div`
   display: flex;
@@ -28,6 +42,8 @@ const Description = styled.div`
   font-size: 18px;
   flex: 1;
   padding-top: 8px;
+  max-height: 100px;
+  overflow: hidden;
 `
 const Bottom = styled.div`
   display: flex;
@@ -43,6 +59,7 @@ const PostedAt = styled.div``
 
 export interface ArticleItemProps extends React.HTMLProps<HTMLDivElement> {
   title: string
+  link: string
   description: string
   image: string
   date: Date
@@ -52,11 +69,14 @@ export interface ArticleItemProps extends React.HTMLProps<HTMLDivElement> {
 
 export default (props: ArticleItemProps) => {
   return (
-    <Wrapper>
+    <Wrapper href={props.link} target="_blank">
       <Image src={props.image} />
       <Main>
         <Title>{props.title}</Title>
-        <Description>{props.title}</Description>
+        <Description>
+          {props.description.substr(0, 140)}
+          {props.description.length >= 140 && "..."}
+        </Description>
         <Bottom>
           <Likes>{props.likes || 0} likes</Likes>
           <Tags>{props.tags.map((tag) => `#${tag.toLowerCase()}`).join(", ")}</Tags>

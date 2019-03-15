@@ -2,7 +2,10 @@ import * as React from "react"
 import styled from "@emotion/styled"
 
 const Wrapper = styled.div<SectionProps>`
-  padding: 40px 150px 42px;
+  padding: 40px 16% 42px;
+  @media (max-width: 1000px) {
+    padding: 40px 40px 42px;
+  }
   @media (max-width: 600px) {
     padding: 40px 10px 42px;
   }

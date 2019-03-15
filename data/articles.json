@@ -1,23 +1,26 @@
 [
   {
-    "title": "Scaling Meteor",
+    "title": "First Experiences Scaling a Meteor App",
     "image": "article-images/meteor.png",
-    "description": "Some nice description about the article.",
-    "tags": ["javascript"],
-    "likes": 86
+    "description": "I recently went through the challenge and ordeal of having to scale my Meteor app. It’s a project that had already been running in production for about a year. This summer the app became a lot more popular with thousands of preseason signups. My initial setup could no longer handle the load and I was faced with a scaling problem that had to be solved quickly.",
+    "tags": ["javascript", "meteor"],
+    "likes": 532,
+    "link": "https://medium.freecodecamp.org/first-experiences-scaling-a-meteor-app-14a48e62a4af"
   },
   {
-    "title": "TS tricks",
+    "title": "Some Lesser Known TypeScript Features",
     "image": "article-images/typescript.jpeg",
-    "description": "Some nice description about the article.",
-    "tags": ["javascript"],
-    "likes": 86
+    "description": "In the past few years, TypeScript has become a popular way to write JavaScript apps. The language is immense and can do a lot of things. Here’s a short list of some rarer TypeScript features you may not be aware of to help with your development",
+    "tags": ["javascript", "typescript"],
+    "likes": 929,
+    "link": "https://medium.com/@eliezer/some-lesser-known-typescript-features-d067e29797d0"
   },
   {
-    "title": "CryptoFighters",
-    "image": "article-images/cryptofighters-arena.png",
-    "description": "Some nice description about the article.",
-    "tags": ["javascript"],
-    "likes": 86
+    "title": "Techniques for Fixing npm Packages",
+    "image": "article-images/npm.png",
+    "description": "If you’re a Javascript you likely make use of many npm packages. There are times a package has a bug or doesn’t do exactly what you want. This post details a few different ways to work around this.",
+    "tags": ["javascript", "npm"],
+    "likes": 200,
+    "link": "https://medium.com/articode/fixing-broken-npm-packages-d8f808657d8e"
   }
 ]
