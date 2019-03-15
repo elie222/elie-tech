@@ -6,7 +6,14 @@ import styled from "@emotion/styled"
 // background-image: url(${headerBackground});
 
 const Background = styled.div`
-  background: #288ade;
+  background: #288ade; /* fallback for old browsers */
+  background: -webkit-linear-gradient(90deg, #4286f4, #373b44); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    90deg,
+    #4286f4,
+    #373b44
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
