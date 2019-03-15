@@ -32,6 +32,10 @@ export default (props: TechnologyItemProps) => {
       <ImageContainer>
         <Image src={props.image} alt={props.title} />
       </ImageContainer>
+      {/*
+        looks better with this removed.
+        use hover behaviour to give more info about the tech in question and its name.
+      */}
       <Label>{props.title}</Label>
     </Wrapper>
   )
