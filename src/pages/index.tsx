@@ -7,12 +7,12 @@ import Header from "../components/Header/Header"
 import SubHeading from "../components/SubHeading/SubHeading"
 import TechnologyItem from "../components/TechnologyItem/TechnologyItem"
 import ArticleList from "../components/ArticleList/ArticleList"
-import "../css/reset.css"
 import Section from "../components/Section/Section"
 import Footer from "../components/Footer/Footer"
 import technologies from "../../data/technologies.json"
 import projects from "../../data/projects.json"
 import articles from "../../data/articles.json"
+import TechnologyList from "../components/TechnologyList/TechnologyList"
 
 const withImagePrefix = (items: any[]) => {
   return items.map((item) => ({
@@ -28,9 +28,10 @@ export default () => (
     <Header />
     <Section>
       <SubHeading>Favourite Technologies</SubHeading>
-      {withImagePrefix(technologies).map(({ title, image }: any) => (
+      <TechnologyList technologies={withImagePrefix(technologies)} />
+      {/* {withImagePrefix(technologies).map(({ title, image }: any) => (
         <TechnologyItem key={title} title={title} image={image} />
-      ))}
+      ))} */}
     </Section>
     <Section coloredBackground>
       <SubHeading>Previous Projects</SubHeading>
