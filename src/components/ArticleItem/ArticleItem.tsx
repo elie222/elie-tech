@@ -6,7 +6,6 @@ const Wrapper = styled.a`
   border-radius: 5px;
   border: solid 1px #ececec;
   background-color: #f4f7f6;
-  font-family: Open Sans;
   color: #000000;
   margin-bottom: 30px;
   line-height: 1.42857em;

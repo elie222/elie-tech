@@ -13,13 +13,11 @@ const Background = styled.div`
 `
 
 const Brand = styled.div`
-  font-family: OpenSans;
   color: #ffffff;
   padding-top: 35px;
 `
 
 const H1 = styled.h1`
-  font-family: OpenSans;
   font-size: 36px;
   line-height: 1.42857em;
   color: #ffffff;
