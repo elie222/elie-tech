@@ -12,7 +12,9 @@ import Footer from "../components/Footer/Footer"
 import technologies from "../../data/technologies.json"
 import projects from "../../data/projects.json"
 import articles from "../../data/articles.json"
+import videos from "../../data/videos.json"
 import TechnologyList from "../components/TechnologyList/TechnologyList"
+import VideoList from "../components/VideoList/VideoList"
 
 const withImagePrefix = (items: any[]) => {
   return items.map((item) => ({
@@ -45,6 +47,7 @@ export default () => (
     </Section>
     <Section coloredBackground>
       <SubHeading>Videos</SubHeading>
+      <VideoList videos={withImagePrefix(videos)} />
       <Button onClick={contact}>GET IN TOUCH</Button>
     </Section>
     <Footer>2019 © Steinbock Software Limited</Footer>

@@ -4,11 +4,6 @@ import TechnologyItem, { TechnologyItemProps } from "../TechnologyItem/Technolog
 
 const Wrapper = styled.div`
   width: 100%;
-  /* display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; */
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
