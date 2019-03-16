@@ -5,16 +5,16 @@ import "typeface-titillium-web"
 import Button from "../components/Button/Button"
 import Header from "../components/Header/Header"
 import SubHeading from "../components/SubHeading/SubHeading"
-import TechnologyItem from "../components/TechnologyItem/TechnologyItem"
-import ArticleList from "../components/ArticleList/ArticleList"
 import Section from "../components/Section/Section"
 import Footer from "../components/Footer/Footer"
+import ArticleList from "../components/ArticleList/ArticleList"
+import TechnologyItem from "../components/TechnologyItem/TechnologyItem"
+import TechnologyList from "../components/TechnologyList/TechnologyList"
+import VideoList from "../components/VideoList/VideoList"
 import technologies from "../../data/technologies.json"
 import projects from "../../data/projects.json"
 import articles from "../../data/articles.json"
 import videos from "../../data/videos.json"
-import TechnologyList from "../components/TechnologyList/TechnologyList"
-import VideoList from "../components/VideoList/VideoList"
 
 const withImagePrefix = (items: any[]) => {
   return items.map((item) => ({
@@ -30,16 +30,11 @@ export default () => (
     <Header />
     <Section>
       <SubHeading>Favourite Technologies</SubHeading>
-      <TechnologyList technologies={withImagePrefix(technologies)} />
-      {/* {withImagePrefix(technologies).map(({ title, image }: any) => (
-        <TechnologyItem key={title} title={title} image={image} />
-      ))} */}
+      <TechnologyList technologies={withImagePrefix(technologies)} showLabel />
     </Section>
     <Section coloredBackground>
       <SubHeading>Previous Projects</SubHeading>
-      {withImagePrefix(projects).map(({ title, image }: any) => (
-        <TechnologyItem key={title} title={title} image={image} />
-      ))}
+      <TechnologyList technologies={withImagePrefix(projects)} showLabel={false} />
     </Section>
     <Section>
       <SubHeading>Articles</SubHeading>

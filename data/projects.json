@@ -1,5 +1,9 @@
 [
-  { "title": "Mercedes-Benz", "image": "/images/projects/articode.png" },
-  { "title": "Draft Fantasy", "image": "/images/projects/articode.png" },
-  { "title": "CryptoFighters", "image": "/images/projects/articode.png" }
+  { "title": "Mercedes-Benz", "image": "/images/projects/mercedes-benz.png" },
+  { "title": "Draft Fantasy", "image": "/images/projects/draft-fantasy.png" },
+  { "title": "CryptoFighters", "image": "/images/projects/cryptofighters.svg" },
+  { "title": "DappWorks", "image": "/images/projects/dappworks.png" },
+  { "title": "CoTrader", "image": "/images/projects/cotrader.png" },
+  { "title": "Articode", "image": "/images/projects/articode.png" },
+  { "title": "Sovereign Coin", "image": "/images/projects/sov.png" }
 ]

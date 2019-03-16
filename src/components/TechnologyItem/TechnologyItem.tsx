@@ -24,6 +24,7 @@ const Label = styled.div`
 export interface TechnologyItemProps extends React.HTMLProps<HTMLDivElement> {
   title: string
   image: string
+  showLabel: boolean
 }
 
 export default (props: TechnologyItemProps) => {
@@ -36,7 +37,7 @@ export default (props: TechnologyItemProps) => {
         looks better with this removed.
         use hover behaviour to give more info about the tech in question and its name.
       */}
-      <Label>{props.title}</Label>
+      {props.showLabel && <Label>{props.title}</Label>}
     </Wrapper>
   )
 }

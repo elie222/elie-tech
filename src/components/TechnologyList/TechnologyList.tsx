@@ -12,13 +12,14 @@ const Wrapper = styled.div`
 
 interface TechnologyListProps extends React.HTMLProps<HTMLDivElement> {
   technologies: TechnologyItemProps[]
+  showLabel: boolean
 }
 
 export default (props: TechnologyListProps) => {
   return (
     <Wrapper>
       {props.technologies.map(({ title, image }) => (
-        <TechnologyItem key={title} title={title} image={image} />
+        <TechnologyItem key={title} title={title} image={image} showLabel={props.showLabel} />
       ))}
     </Wrapper>
   )
