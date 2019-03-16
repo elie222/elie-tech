@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "@emotion/styled"
+import GetInTouchButton from "../Button/GetInTouchButton"
 // not working with SB :(
 // import headerBackground from "./header-background.svg"
 // import headerBackground from './header-background.png'
@@ -17,6 +18,7 @@ const Background = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  padding-bottom: 60px;
 `
 
 const Brand = styled.div`
@@ -28,7 +30,7 @@ const H1 = styled.h1`
   font-size: 36px;
   line-height: 1.42857em;
   color: #ffffff;
-  padding: 60px 10% 106px;
+  padding: 60px 10%;
 `
 
 export default () => {
@@ -40,6 +42,7 @@ export default () => {
         <br />
         I’m a full stack freelance developer living in Tel Aviv.
       </H1>
+      <GetInTouchButton />
     </Background>
   )
 }

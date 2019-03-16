@@ -2,7 +2,6 @@ import * as React from "react"
 import { withPrefix } from "gatsby"
 import "typeface-open-sans"
 import "typeface-titillium-web"
-import Button from "../components/Button/Button"
 import Header from "../components/Header/Header"
 import SubHeading from "../components/SubHeading/SubHeading"
 import Section from "../components/Section/Section"
@@ -15,6 +14,7 @@ import technologies from "../../data/technologies.json"
 import projects from "../../data/projects.json"
 import articles from "../../data/articles.json"
 import videos from "../../data/videos.json"
+import GetInTouchButton from "../components/Button/GetInTouchButton"
 
 const withImagePrefix = (items: any[]) => {
   return items.map((item) => ({
@@ -22,8 +22,6 @@ const withImagePrefix = (items: any[]) => {
     image: withPrefix(item.image),
   }))
 }
-
-const contact = () => window.open("mailto:elie@dappworks.co", "_blank")
 
 export default () => (
   <div>
@@ -43,7 +41,7 @@ export default () => (
     <Section coloredBackground>
       <SubHeading>Videos</SubHeading>
       <VideoList videos={withImagePrefix(videos)} />
-      <Button onClick={contact}>GET IN TOUCH</Button>
+      <GetInTouchButton />
     </Section>
     <Footer>2019 © Steinbock Software Limited</Footer>
   </div>
