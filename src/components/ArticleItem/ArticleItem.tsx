@@ -1,4 +1,5 @@
 import * as React from "react"
+// import Img from 'gatsby-image'
 import styled from "@emotion/styled"
 import favorite from "./favorite.svg"
 
@@ -89,6 +90,7 @@ export default (props: ArticleItemProps) => {
   return (
     <Wrapper href={props.link} target="_blank">
       <Image src={props.image} />
+      {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
       <Main>
         <Title>{props.title}</Title>
         <Bottom>

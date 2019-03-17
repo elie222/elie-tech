@@ -29,6 +29,7 @@ export interface TechnologyItemProps extends React.HTMLProps<HTMLDivElement> {
   image: string
   showLabel: boolean
   imageWidth: number
+  link?: string
 }
 
 export default (props: TechnologyItemProps) => {
