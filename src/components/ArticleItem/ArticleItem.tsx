@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "@emotion/styled"
+import favorite from "./favorite.svg"
 
 const MOBILE_BREAK_POINT = 500
 
@@ -15,9 +16,6 @@ const Wrapper = styled.a`
   border: solid 1px #ececec;
   background-color: #f4f7f6;
   color: #000000;
-  /* margin-bottom: 30px; */
-  line-height: 1.42857em;
-  /* height: 200px; */
   cursor: pointer;
   text-decoration: none;
   overflow: hidden;
@@ -35,12 +33,6 @@ const Image = styled.img`
     width: 100%;
     height: 100px;
   }
-  /* @media (max-width: 1000px) {
-    width: 250px;
-  }
-  @media (max-width: ${MOBILE_BREAK_POINT}px) {
-    width: 150px;
-  } */
 `
 const Main = styled.div`
   display: flex;
@@ -58,22 +50,24 @@ const Title = styled.h3`
   font-weight: 800;
   margin-bottom: 12px;
 `
-// const Description = styled.div`
-//   font-size: 14px;
-//   flex: 1;
-//   padding-top: 8px;
-//   max-height: 100px;
-//   overflow: hidden;
-// `
 const Bottom = styled.div`
   display: flex;
   font-size: 16px;
+  justify-content: space-between;
 `
+
 const Likes = styled.div`
-  margin-right: 43px;
+  display: flex;
+  align-items: center;
+`
+
+const LikesIcon = styled.img`
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
 `
 const Tags = styled.div`
-  flex: 1;
+  /* flex: 1; */
 `
 const PostedAt = styled.div``
 
@@ -94,12 +88,11 @@ export default (props: ArticleItemProps) => {
       <Image src={props.image} />
       <Main>
         <Title>{props.title}</Title>
-        {/* <Description>
-          {props.description.substr(0, 140)}
-          {props.description.length >= 140 && "..."}
-        </Description> */}
         <Bottom>
-          <Likes>{props.likes || 0} likes</Likes>
+          <Likes>
+            {props.likes || 0}
+            <LikesIcon src={favorite} />
+          </Likes>
           <Tags>{props.tags.map((tag) => `#${tag.toLowerCase()}`).join(", ")}</Tags>
           <PostedAt>
             {props.date.getMonth() + 1}/{props.date.getFullYear()}
