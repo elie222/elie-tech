@@ -5,6 +5,9 @@ const MOBILE_BREAK_POINT = 500
 
 const Wrapper = styled.a`
   display: flex;
+  @media (min-width: ${MOBILE_BREAK_POINT + 1}px) {
+    height: 124px;
+  }
   @media (max-width: ${MOBILE_BREAK_POINT}px) {
     flex-direction: column;
   }
