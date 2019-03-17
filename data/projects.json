@@ -1,8 +1,27 @@
 [
-  { "title": "Mercedes-Benz", "image": "/images/projects/mercedes-benz.png" },
-  { "title": "Draft Fantasy", "image": "/images/projects/draft-fantasy.png" },
-  { "title": "CryptoFighters", "image": "/images/projects/cryptofighters.svg" },
-  { "title": "DappWorks", "image": "/images/projects/dappworks.png" },
+  {
+    "title": "Mercedes-Benz",
+    "image": "/images/projects/mercedes-benz.png",
+    "description": "I was tasked with building an internal for the Mercedes-Benz teams. My responsibilities were fully frontend focused. This was a complex project and some of the tools used included React, Mobx State Tree, Styled Components, and D3."
+  },
+  {
+    "title": "Draft Fantasy",
+    "image": "/images/projects/draft-fantasy.png",
+    "description": "Draft Fantasy is a company I founded while serving in the IDF. To date the site has over 180,000 registered users and received seed funding. The game has both a website and iOS and Android mobile apps. The technology stack for the project includes: React, React Native, Node.js, Elixir, MongoDB, GraphQL, Jest, Ansible, Nginx and AWS.",
+    "link": "https://draftfantasyfootball.co.uk/"
+  },
+  {
+    "title": "CryptoFighters",
+    "image": "/images/projects/cryptofighters.svg",
+    "description": "A project I put together with 5 others in the crypto space. The game is built on the Ethereum blockchain with smart contracts written in Solidity. Other technologies used in this project include React, Node.js caching server, Python for image generation, Truffle for Solidity development and testing, Geth and PM2 for deployment.",
+    "link": "https://cryptofighters.io/"
+  },
+  {
+    "title": "DappWorks",
+    "image": "/images/projects/dappworks.png",
+    "description": "DappWorks is community of blockchain developers of decentralised apps. DappWorks ran a popular hackathon with sponsorship from some of the biggest names in the cryptocurrency space including Bancor, Orbs, IronSource and ConsenSys. Teams developed projects on the Ethereum and EOS blockchains.",
+    "link": "https://dappworks.co/dappathon"
+  },
   { "title": "CoTrader", "image": "/images/projects/cotrader.png" },
   { "title": "Articode", "image": "/images/projects/articode.png" },
   { "title": "Sovereign Coin", "image": "/images/projects/sov.svg" }

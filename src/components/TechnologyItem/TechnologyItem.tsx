@@ -25,6 +25,7 @@ const Label = styled.div`
 
 export interface TechnologyItemProps extends React.HTMLProps<HTMLDivElement> {
   title: string
+  description?: string
   image: string
   showLabel: boolean
   imageWidth: number

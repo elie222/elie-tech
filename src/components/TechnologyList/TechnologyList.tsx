@@ -1,6 +1,7 @@
 import * as React from "react"
 import styled from "@emotion/styled"
 import TechnologyItem, { TechnologyItemProps } from "../TechnologyItem/TechnologyItem"
+import Description from "../Description/Description"
 
 const Wrapper = styled.div`
   width: 100%;
@@ -15,8 +16,15 @@ const Wrapper = styled.div`
   @media (max-width: 400px) {
     grid-template-columns: minmax(0, 1fr);
   }
-  justify-items: center;
   grid-row-gap: 25px;
+  justify-items: center;
+`
+
+const ItemContainer = styled.div<{ clickable: boolean }>`
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  ${(props) => props.clickable && "cursor: pointer;"}
 `
 
 interface TechnologyListProps extends React.HTMLProps<HTMLDivElement> {
@@ -26,16 +34,32 @@ interface TechnologyListProps extends React.HTMLProps<HTMLDivElement> {
 }
 
 export default (props: TechnologyListProps) => {
+  const [visibleDescription, setVisibleDescription] = React.useState(null)
+
   return (
     <Wrapper>
-      {props.technologies.map(({ title, image }) => (
-        <TechnologyItem
-          key={title}
-          title={title}
-          image={image}
-          showLabel={props.showLabel}
-          imageWidth={props.imageWidth}
-        />
+      {props.technologies.map(({ title, description, image, link }) => (
+        <React.Fragment key={title}>
+          <ItemContainer
+            clickable={!!description}
+            onClick={() => description && setVisibleDescription(title)}
+          >
+            <TechnologyItem
+              title={title}
+              image={image}
+              showLabel={props.showLabel}
+              imageWidth={props.imageWidth}
+            />
+          </ItemContainer>
+          {visibleDescription === title && description && (
+            <Description
+              title={title}
+              description={description}
+              link={link}
+              close={() => setVisibleDescription(null)}
+            />
+          )}
+        </React.Fragment>
       ))}
     </Wrapper>
   )
