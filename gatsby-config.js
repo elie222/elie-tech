@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `elie.tech`,
-    googleVerification: `abcdefz`,
-    disqus: `gatsby-typescript`
+    title: `elie.tech`
+    // GoogleVerification: `abcdefz`,
+    // disqus: `gatsby-typescript`
   },
   plugins: [
     // Expose `/data` to graphQL layer
@@ -63,12 +63,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby website`,
-        short_name: `Gatsby website`,
+        name: `elie.tech`,
+        short_name: `elie.tech`,
         start_url: `/`,
         background_color: `#f7f7f7`,
         theme_color: `#191919`,
-        display: `minimal-ui`
+        display: `minimal-ui`,
+        icon: `static/images/favicon/favicon.svg`,
+        include_favicon: true
       }
     },
     /* eslint-enable camelcase */

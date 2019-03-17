@@ -1,11 +1,10 @@
 import * as React from "react"
 import { withPrefix } from "gatsby"
-import "typeface-open-sans"
-import "typeface-titillium-web"
 import Header from "../components/Header/Header"
 import SubHeading from "../components/SubHeading/SubHeading"
 import Section from "../components/Section/Section"
 import Footer from "../components/Footer/Footer"
+import GetInTouchButton from "../components/Button/GetInTouchButton"
 import ArticleList from "../components/ArticleList/ArticleList"
 import TechnologyList from "../components/TechnologyList/TechnologyList"
 import VideoList from "../components/VideoList/VideoList"
@@ -13,7 +12,6 @@ import technologies from "../../data/technologies.json"
 import projects from "../../data/projects.json"
 import articles from "../../data/articles.json"
 import videos from "../../data/videos.json"
-import GetInTouchButton from "../components/Button/GetInTouchButton"
 
 const withImagePrefix = (items: any[]) => {
   return items.map((item) => ({
