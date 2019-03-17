@@ -12,7 +12,9 @@ describe("Description component", () => {
     const title: string = null // TODO assign real value
     const description: string = null // TODO assign real value
 
-    const wrapper = render(<Description title={title} description={description} />)
+    const wrapper = render(
+      <Description title={title} description={description} close={() => null} />,
+    )
     expect(wrapper).toMatchSnapshot()
   })
 })

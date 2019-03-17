@@ -4,26 +4,15 @@ import { action } from "@storybook/addon-actions"
 import ArticleItem from "./ArticleItem"
 import "../../css/reset.css"
 
-storiesOf("ArticleItem", module)
-  .add("default", () => {
-    const title: string = "Scaling Meteor"
-    const description: string =
-      "I recently went through the challenge and ordeal of having to scale my Meteor app. " +
-      "It’s a project that had already been running in production for about a year. " +
-      "This summer the app became a lot more popular with thousands of"
-    const date: Date = new Date()
-    const tags: string[] = ["JavaScript", "Meteor"]
-    const image: string = "/images/TODO"
-    const likes = 186
+storiesOf("ArticleItem", module).add("default", () => {
+  const title: string = "Scaling Meteor"
+  const date: string = "Dec 19"
+  const tags: string[] = ["JavaScript", "Meteor"]
+  const image: string = "/images/TODO"
+  const likes = 186
+  const link = "#"
 
-    return (
-      <ArticleItem
-        title={title}
-        description={description}
-        date={date}
-        tags={tags}
-        image={image}
-        likes={likes}
-      />
-    )
-  })
+  return (
+    <ArticleItem title={title} date={date} tags={tags} image={image} likes={likes} link={link} />
+  )
+})

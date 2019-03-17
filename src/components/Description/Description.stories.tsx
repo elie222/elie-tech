@@ -9,6 +9,6 @@ storiesOf("Description", module)
     const description: string = null // TODO assign real value
 
     return (
-      <Description title={title} description={description} />
+      <Description title={title} description={description} close={() => null} />
     )
   })

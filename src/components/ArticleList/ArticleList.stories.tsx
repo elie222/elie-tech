@@ -5,32 +5,33 @@ import ArticleList from "./ArticleList"
 // webpack problems
 // import articles from "../../../data/articles.json"
 
-const now = new Date()
-
 const articles = [
   {
     title: "Scaling Meteor",
     image: "article-images/meteor.png",
     description: "Some nice description about the article.",
-    date: now,
+    date: "Dec 19",
     tags: ["javascript"],
     likes: 86,
+    link: "#",
   },
   {
     title: "TS tricks",
     image: "/images/react",
     description: "Some nice description about the article.",
-    date: now,
+    date: "Dec 19",
     tags: ["javascript"],
     likes: 86,
+    link: "#",
   },
   {
     title: "CryptoFighters",
     image: "/images/react",
     description: "Some nice description about the article.",
-    date: now,
+    date: "Dec 19",
     tags: ["javascript"],
     likes: 86,
+    link: "#",
   },
 ]
 

@@ -9,9 +9,8 @@ configure({ adapter: new Adapter() })
 
 describe("ArticleItem component", () => {
   it("should render correctly", () => {
-    const title: string = "Some Title" // TODO assign real value
-    const description: string = "Some desc" // TODO assign real value
-    const date: Date = new Date() // TODO assign real value
+    const title: string = "Some Title"
+    const date: string = "Dec 19"
     const tags: string[] = [] // TODO assign real value
     const likes: number = 86
     const image: string = "/images/TODO"
@@ -19,11 +18,11 @@ describe("ArticleItem component", () => {
     const wrapper = render(
       <ArticleItem
         title={title}
-        description={description}
         date={date}
         tags={tags}
         likes={likes}
         image={image}
+        link="#"
       />,
     )
     expect(wrapper).toMatchSnapshot()

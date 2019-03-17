@@ -12,7 +12,9 @@ describe("TechnologyItem component", () => {
     const title: string = null // TODO assign real value
     const image: string = null // TODO assign real value
 
-    const wrapper = render(<TechnologyItem title={title} image={image} />)
+    const wrapper = render(
+      <TechnologyItem title={title} image={image} showLabel imageWidth={100} />,
+    )
     expect(wrapper).toMatchSnapshot()
   })
 })

@@ -9,7 +9,7 @@ configure({ adapter: new Adapter() })
 
 describe("SubHeading component", () => {
   it("should render correctly", () => {
-    const wrapper = render(<SubHeading />)
+    const wrapper = render(<SubHeading>Heading</SubHeading>)
     expect(wrapper).toMatchSnapshot()
   })
 })
