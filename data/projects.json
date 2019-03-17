@@ -22,7 +22,21 @@
     "description": "DappWorks is community of blockchain developers of decentralised apps. DappWorks ran a popular hackathon with sponsorship from some of the biggest names in the cryptocurrency space including Bancor, Orbs, IronSource and ConsenSys. Teams developed projects on the Ethereum and EOS blockchains.",
     "link": "https://dappworks.co/dappathon"
   },
-  { "title": "CoTrader", "image": "/images/projects/cotrader.png" },
-  { "title": "Articode", "image": "/images/projects/articode.png" },
-  { "title": "Sovereign Coin", "image": "/images/projects/sov.svg" }
+  {
+    "title": "CoTrader",
+    "image": "/images/projects/cotrader.png",
+    "description": "I worked at CoTrader to develop a decentralised fund management platform. The project was built on the Ethereum blockchain and integrated with a web app built using React, Node.js and MongoDB. The project integrated with other decentralised exchanges including Bancor and Kyber."
+  },
+  {
+    "title": "Articode",
+    "image": "/images/projects/articode.png",
+    "description": "I was brought on by the Articode team to complete a project for the defense industry. The project was done in Angular 6 and made use of Ceasium JS.",
+    "link": "https://articode.co/"
+  },
+  {
+    "title": "Sovereign Coin",
+    "image": "/images/projects/sov.svg",
+    "description": "On February 26, 2018 the Republic of the Marshall Islands issued the Sovereign Currency Act of 2018 introducing a new blockchain based currency called the Sovereign (‘SOV’) as “legal tender of the Marshall Islands for all debts, public charges, taxes and dues.” I worked as a consultant on this project helping to develop the currency.",
+    "link": "https://www.sov.global/"
+  }
 ]
