@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   @media (max-width: 1200px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   justify-items: center;
   grid-row-gap: 25px;
@@ -21,13 +21,12 @@ interface ArticleListProps {
 export default (props: ArticleListProps) => {
   return (
     <Wrapper>
-      {props.articles.map(({ title, image, description, date, tags, likes, link }) => (
+      {props.articles.map(({ title, image, date, tags, likes, link }) => (
         <ArticleItem
           key={title}
           title={title}
           image={image}
-          description={description}
-          date={date || new Date()}
+          date={date}
           tags={tags}
           likes={likes}
           link={link}

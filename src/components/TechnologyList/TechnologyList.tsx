@@ -5,15 +5,15 @@ import TechnologyItem, { TechnologyItemProps } from "../TechnologyItem/Technolog
 const Wrapper = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   @media (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   }
   @media (max-width: 700px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
   @media (max-width: 400px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   justify-items: center;
   grid-row-gap: 25px;

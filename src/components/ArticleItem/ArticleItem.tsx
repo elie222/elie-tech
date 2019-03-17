@@ -38,7 +38,8 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 18px 22px;
+  /* padding: 18px 22px; */
+  padding: 12px 18px;
   justify-content: space-between;
 
   @media (max-width: ${MOBILE_BREAK_POINT}px) {
@@ -55,12 +56,10 @@ const Bottom = styled.div`
   font-size: 16px;
   /* justify-content: space-between; */
 `
-
 const Likes = styled.div`
   display: flex;
   align-items: center;
 `
-
 const LikesIcon = styled.img`
   width: 16px;
   height: 16px;
@@ -69,9 +68,12 @@ const LikesIcon = styled.img`
 const Tags = styled.div`
   flex: 1;
   margin: 0 10px;
+  overflow: hidden;
 `
 const PostedAt = styled.div`
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 `
 
 export interface ArticleItemProps extends React.HTMLProps<HTMLDivElement> {
