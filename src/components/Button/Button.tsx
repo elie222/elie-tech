@@ -16,13 +16,16 @@ const Button = styled.button<ButtonProps>`
   padding: 10px 70px;
 
   :hover {
-    background-color: ${(props) => (props.full ? white : blue)};
+    background-color: ${(props) =>
+      props.transparentHover ? "transparent" : props.full ? white : blue};
+    ${(props) => props.transparentHover && `border: solid 3px ${white}`};
     color: ${(props) => (props.full ? blue : white)};
   }
 `
 
 interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   full?: boolean
+  transparentHover?: boolean
 }
 
 export default (props: ButtonProps) => {

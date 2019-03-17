@@ -42,7 +42,7 @@ export default () => {
         <br />
         I’m a full stack freelance developer living in Tel Aviv.
       </H1>
-      <GetInTouchButton />
+      <GetInTouchButton transparentHover />
     </Background>
   )
 }
