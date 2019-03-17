@@ -10,10 +10,12 @@ const ImageContainer = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
 `
 
-const Image = styled.img`
-  width: 120px;
+const Image = styled.img<{ imageWidth: number }>`
+  width: ${(props) => props.imageWidth}px;
+  max-width: 90%;
   margin-bottom: 10px;
 `
 
@@ -25,13 +27,14 @@ export interface TechnologyItemProps extends React.HTMLProps<HTMLDivElement> {
   title: string
   image: string
   showLabel: boolean
+  imageWidth: number
 }
 
 export default (props: TechnologyItemProps) => {
   return (
     <Wrapper>
       <ImageContainer>
-        <Image src={props.image} alt={props.title} />
+        <Image src={props.image} alt={props.title} imageWidth={props.imageWidth} />
       </ImageContainer>
       {/*
         looks better with this removed.

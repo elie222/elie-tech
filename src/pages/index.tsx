@@ -7,7 +7,6 @@ import SubHeading from "../components/SubHeading/SubHeading"
 import Section from "../components/Section/Section"
 import Footer from "../components/Footer/Footer"
 import ArticleList from "../components/ArticleList/ArticleList"
-import TechnologyItem from "../components/TechnologyItem/TechnologyItem"
 import TechnologyList from "../components/TechnologyList/TechnologyList"
 import VideoList from "../components/VideoList/VideoList"
 import technologies from "../../data/technologies.json"
@@ -28,11 +27,11 @@ export default () => (
     <Header />
     <Section>
       <SubHeading>Favourite Technologies</SubHeading>
-      <TechnologyList technologies={withImagePrefix(technologies)} showLabel />
+      <TechnologyList technologies={withImagePrefix(technologies)} showLabel imageWidth={120} />
     </Section>
     <Section coloredBackground>
       <SubHeading>Previous Projects</SubHeading>
-      <TechnologyList technologies={withImagePrefix(projects)} showLabel={false} />
+      <TechnologyList technologies={withImagePrefix(projects)} showLabel={false} imageWidth={180} />
     </Section>
     <Section>
       <SubHeading>Articles</SubHeading>
