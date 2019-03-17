@@ -53,7 +53,7 @@ const Title = styled.h3`
 const Bottom = styled.div`
   display: flex;
   font-size: 16px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 `
 
 const Likes = styled.div`
@@ -67,19 +67,20 @@ const LikesIcon = styled.img`
   margin: 0 5px;
 `
 const Tags = styled.div`
-  /* flex: 1; */
+  flex: 1;
+  margin: 0 10px;
 `
-const PostedAt = styled.div``
+const PostedAt = styled.div`
+  white-space: nowrap;
+`
 
 export interface ArticleItemProps extends React.HTMLProps<HTMLDivElement> {
   title: string
   link: string
   image: string
-  date: Date
+  date: string
   tags: string[]
   likes?: number
-  // removed
-  description?: string
 }
 
 export default (props: ArticleItemProps) => {
@@ -95,7 +96,8 @@ export default (props: ArticleItemProps) => {
           </Likes>
           <Tags>{props.tags.map((tag) => `#${tag.toLowerCase()}`).join(", ")}</Tags>
           <PostedAt>
-            {props.date.getMonth() + 1}/{props.date.getFullYear()}
+            {/* {props.date.getMonth() + 1}/{props.date.getFullYear()} */}
+            {props.date}
           </PostedAt>
         </Bottom>
       </Main>

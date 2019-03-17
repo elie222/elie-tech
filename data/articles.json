@@ -1,26 +1,66 @@
 [
   {
-    "title": "First Experiences Scaling a Meteor App",
-    "image": "images/articles/meteor.png",
-    "description": "I recently went through the challenge and ordeal of having to scale my Meteor app. It’s a project that had already been running in production for about a year. This summer the app became a lot more popular with thousands of preseason signups. My initial setup could no longer handle the load and I was faced with a scaling problem that had to be solved quickly.",
-    "tags": ["javascript", "meteor"],
-    "likes": 532,
-    "link": "https://medium.freecodecamp.org/first-experiences-scaling-a-meteor-app-14a48e62a4af"
+    "title": "Should I use React Native?",
+    "image": "images/articles/react-native.png",
+    "tags": ["javascript", "reactnative", "react"],
+    "likes": 321,
+    "link": "https://medium.com/articode/fixing-broken-npm-packages-d8f808657d8e",
+    "date": "Mar '19"
   },
   {
     "title": "Some Lesser Known TypeScript Features",
     "image": "images/articles/typescript.jpeg",
-    "description": "In the past few years, TypeScript has become a popular way to write JavaScript apps. The language is immense and can do a lot of things. Here’s a short list of some rarer TypeScript features you may not be aware of to help with your development",
     "tags": ["javascript", "typescript"],
     "likes": 929,
-    "link": "https://medium.com/@eliezer/some-lesser-known-typescript-features-d067e29797d0"
+    "link": "https://medium.com/@eliezer/some-lesser-known-typescript-features-d067e29797d0",
+    "date": "Feb '19"
   },
   {
     "title": "Techniques for Fixing npm Packages",
     "image": "images/articles/npm.png",
-    "description": "If you’re a Javascript you likely make use of many npm packages. There are times a package has a bug or doesn’t do exactly what you want. This post details a few different ways to work around this.",
     "tags": ["javascript", "npm"],
     "likes": 200,
-    "link": "https://medium.com/articode/fixing-broken-npm-packages-d8f808657d8e"
+    "link": "https://medium.com/articode/fixing-broken-npm-packages-d8f808657d8e",
+    "date": "Feb '19"
+  },
+  {
+    "title": "Super Notes on Super Founders",
+    "image": "images/articles/unicorn.jpeg",
+    "tags": ["entrepreneurship", "business", "startups"],
+    "likes": 210,
+    "link": "https://hackernoon.com/notes-on-super-founders-11254f693267",
+    "date": "Jan '19"
+  },
+  {
+    "title": "ELI5: Plasma Cash — Scaling Ethereum",
+    "image": "images/articles/merkle-tree.png",
+    "tags": ["blockchain", "ethereum", "scaling"],
+    "likes": 251,
+    "link": "https://hackernoon.com/eli5-plasma-cash-ff242c55e8de",
+    "date": "Nov '18"
+  },
+  {
+    "title": "The State of Dapp Development — Blockchain Summer 2018",
+    "image": "images/articles/cryptofighters-arena.png",
+    "tags": ["blockchain"],
+    "likes": 251,
+    "link": "https://hackernoon.com/the-state-of-dapp-development-blockchain-summer-2018-a1f5b99b67db",
+    "date": "Oct '18"
+  },
+  {
+    "title": "I’ve been running Meteor at scale for a year now. Here’s what I’ve learned.",
+    "image": "images/articles/meteor-sky.jpeg",
+    "tags": ["javascript", "meteor", "scaling"],
+    "likes": 1531,
+    "link": "https://medium.freecodecamp.org/scaling-meteor-a-year-on-26ee37588e4b",
+    "date": "Dec '16"
+  },
+  {
+    "title": "First Experiences Scaling a Meteor App",
+    "image": "images/articles/meteor.png",
+    "tags": ["javascript", "meteor", "scaling"],
+    "likes": 532,
+    "link": "https://medium.freecodecamp.org/first-experiences-scaling-a-meteor-app-14a48e62a4af",
+    "date": "Nov '15"
   }
 ]
