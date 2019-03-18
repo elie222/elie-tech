@@ -17,7 +17,16 @@ const withImagePrefix = (items: any[]) => {
 }
 
 export default ({ data }: any) => {
-  // console.log(data)
+  const articleImages = data.articleImages.edges
+  // const videoImages = data.videoImages.edges
+  // const articles = withImagePrefix(data.allArticlesJson.edges.map(({ node }: any) => node))
+  const articles = data.allArticlesJson.edges.map(({ node }: any) => {
+    const image = articleImages.find(
+      (img: any) => img.node.childImageSharp.fluid.originalName === node.image,
+    )
+    return { ...node, image: image.node.childImageSharp.fluid }
+  })
+
   return (
     <div>
       <Header />
@@ -41,9 +50,7 @@ export default ({ data }: any) => {
       </Section>
       <Section>
         <SubHeading>Articles</SubHeading>
-        <ArticleList
-          articles={withImagePrefix(data.allArticlesJson.edges.map(({ node }: any) => node))}
-        />
+        <ArticleList articles={articles} />
       </Section>
       <Section coloredBackground>
         <SubHeading>Videos</SubHeading>
@@ -102,5 +109,29 @@ export const pageQuery = graphql`
         }
       }
     }
+    articleImages: allFile(filter: { relativeDirectory: { eq: "articles" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              originalName
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+      }
+    }
+    # videoImages: allFile(filter: { relativeDirectory: { eq: "videos" } }) {
+    #   edges {
+    #     node {
+    #       childImageSharp {
+    #         fluid(maxWidth: 500) {
+    #           originalName
+    #           ...GatsbyImageSharpFluid_withWebp_noBase64
+    #         }
+    #       }
+    #     }
+    #   }
+    # }
   }
 `

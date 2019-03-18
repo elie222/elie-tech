@@ -1,5 +1,5 @@
 import * as React from "react"
-// import Img from 'gatsby-image'
+import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import favorite from "./favorite.svg"
 
@@ -26,10 +26,10 @@ const Wrapper = styled.a`
     border: solid 1px var(--deep-sky-blue);
   }
 `
-const Image = styled.img`
+const ImageWrapper = styled.div`
   width: 159px;
   height: 124px;
-  object-fit: cover;
+  /* object-fit: cover; */
   @media (max-width: ${MOBILE_BREAK_POINT}px) {
     width: 100%;
     height: 100px;
@@ -80,7 +80,7 @@ const PostedAt = styled.div`
 export interface ArticleItemProps extends React.HTMLProps<HTMLDivElement> {
   title: string
   link: string
-  image: string
+  image: any
   date: string
   tags: string[]
   likes?: number
@@ -89,8 +89,10 @@ export interface ArticleItemProps extends React.HTMLProps<HTMLDivElement> {
 export default (props: ArticleItemProps) => {
   return (
     <Wrapper href={props.link} target="_blank">
-      <Image src={props.image} />
-      {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
+      {/* <Image src={props.image} /> */}
+      <ImageWrapper>
+        <Img fluid={props.image} style={{ height: "100%" }} />
+      </ImageWrapper>
       <Main>
         <Title>{props.title}</Title>
         <Bottom>
