@@ -1,8 +1,13 @@
 import * as React from "react"
 import Button from "./Button"
 
-const contact = () => window.open("mailto:elie@dappworks.co", "_blank")
+// broken up to make scraping harder
+const contact = () => window.open("mailto:elie" + "steinbock@" + "gmail.com", "_blank")
 
 export default (props: any) => {
-  return <Button onClick={contact} transparentHover={props.transparentHover}>GET IN TOUCH</Button>
+  return (
+    <Button onClick={contact} transparentHover={props.transparentHover}>
+      GET IN TOUCH
+    </Button>
+  )
 }

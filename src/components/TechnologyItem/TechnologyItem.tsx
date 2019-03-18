@@ -1,4 +1,5 @@
 import * as React from "react"
+import Img from "gatsby-image"
 import styled from "@emotion/styled"
 
 const Wrapper = styled.div`
@@ -13,10 +14,14 @@ const ImageContainer = styled.div`
   justify-content: center;
 `
 
-const Image = styled.img<{ imageWidth: number }>`
+const ImageWrapper = styled.div<{ imageWidth: number }>`
   width: ${(props) => props.imageWidth}px;
   max-width: 90%;
   margin-bottom: 10px;
+`
+
+const Image = styled.img`
+  width: 100%;
 `
 
 const Label = styled.div`
@@ -26,7 +31,7 @@ const Label = styled.div`
 export interface TechnologyItemProps extends React.HTMLProps<HTMLDivElement> {
   title: string
   description?: string
-  image: string
+  image: any
   showLabel: boolean
   imageWidth: number
   link?: string
@@ -36,7 +41,13 @@ export default (props: TechnologyItemProps) => {
   return (
     <Wrapper>
       <ImageContainer>
-        <Image src={props.image} alt={props.title} imageWidth={props.imageWidth} />
+        <ImageWrapper imageWidth={props.imageWidth}>
+          {typeof props.image === "string" ? (
+            <Image src={props.image} alt={props.title} />
+          ) : (
+            <Img fluid={props.image} alt={props.title} />
+          )}
+        </ImageWrapper>
       </ImageContainer>
       {/*
         looks better with this removed.

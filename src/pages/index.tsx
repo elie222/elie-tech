@@ -1,5 +1,5 @@
 import * as React from "react"
-import { withPrefix, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Header from "../components/Header/Header"
 import SubHeading from "../components/SubHeading/SubHeading"
 import Section from "../components/Section/Section"
@@ -9,24 +9,23 @@ import ArticleList from "../components/ArticleList/ArticleList"
 import TechnologyList from "../components/TechnologyList/TechnologyList"
 import VideoList from "../components/VideoList/VideoList"
 
-const withImagePrefix = (items: any[]) => {
-  return items.map((item) => ({
-    ...item,
-    image: withPrefix(item.image),
-  }))
-}
-
 const attachImages = (allJson: { edges: any[] }, images: any[]) => {
   return allJson.edges.map(({ node }: any) => {
-    const image = images.find(
-      (img: any) => img.node.childImageSharp.fluid.originalName === node.image,
-    )
+    const image = images.find((img: any) => img.node.base === node.image)
 
-    return { ...node, image: image && image.node.childImageSharp.fluid }
+    // use publicURL for svgs
+    return {
+      ...node,
+      image:
+        (image && image.node.childImageSharp && image.node.childImageSharp.fluid) ||
+        image.node.publicURL,
+    }
   })
 }
 
 export default ({ data }: any) => {
+  const technologies = attachImages(data.allTechnologiesJson, data.technologyImages.edges)
+  const projects = attachImages(data.allProjectsJson, data.projectImages.edges)
   const articles = attachImages(data.allArticlesJson, data.articleImages.edges)
   const videos = attachImages(data.allVideosJson, data.videoImages.edges)
 
@@ -35,21 +34,11 @@ export default ({ data }: any) => {
       <Header />
       <Section>
         <SubHeading>Favourite Technologies</SubHeading>
-        <TechnologyList
-          technologies={withImagePrefix(
-            data.allTechnologiesJson.edges.map(({ node }: any) => node),
-          )}
-          showLabel
-          imageWidth={120}
-        />
+        <TechnologyList technologies={technologies} showLabel imageWidth={120} />
       </Section>
       <Section coloredBackground>
         <SubHeading>Previous Projects</SubHeading>
-        <TechnologyList
-          technologies={withImagePrefix(data.allProjectsJson.edges.map(({ node }: any) => node))}
-          showLabel={false}
-          imageWidth={180}
-        />
+        <TechnologyList technologies={projects} showLabel={false} imageWidth={180} />
       </Section>
       <Section>
         <SubHeading>Articles</SubHeading>
@@ -66,6 +55,20 @@ export default ({ data }: any) => {
 }
 
 export const pageQuery = graphql`
+  fragment Images on FileConnection {
+    edges {
+      node {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+        base
+        publicURL
+      }
+    }
+  }
+
   query {
     allTechnologiesJson {
       edges {
@@ -110,29 +113,17 @@ export const pageQuery = graphql`
         }
       }
     }
+    technologyImages: allFile(filter: { relativeDirectory: { eq: "technologies" } }) {
+      ...Images
+    }
+    projectImages: allFile(filter: { relativeDirectory: { eq: "projects" } }) {
+      ...Images
+    }
     articleImages: allFile(filter: { relativeDirectory: { eq: "articles" } }) {
-      edges {
-        node {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              originalName
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-      }
+      ...Images
     }
     videoImages: allFile(filter: { relativeDirectory: { eq: "videos" } }) {
-      edges {
-        node {
-          childImageSharp {
-            fluid(maxWidth: 500) {
-              originalName
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-      }
+      ...Images
     }
   }
 `
