@@ -40,5 +40,30 @@ module.exports = ({ config }) => {
   })
   config.resolve.extensions.push('.md')
 
+  // TRYING TO GET SVGS WORKING
+
+  // disabling default SB rules for images
+  config.module.rules = config.module.rules.filter(rule => {
+    const ruleTestStr = rule.test.toString()
+    return (
+      // ruleTestStr !== '/\\.css$/' &&
+      ruleTestStr !== '/\\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\\?.*)?$/'
+    )
+  })
+
+  // Add svg loader
+  config.module.rules.push({
+    test: /\.svg$/,
+    include: path.resolve(__dirname, '../src'),
+    exclude: /node_module/,
+    use: {
+      loader: 'svg-react-loader',
+      // options: {
+      //   name: 'Icon'
+      // }
+    },
+  })
+  config.resolve.extensions.push('.svg')
+
   return config
 }

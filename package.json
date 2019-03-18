@@ -63,6 +63,7 @@
     "react-helmet": "^5.2.0",
     "react-popper-tooltip": "^2.8.1",
     "slash": "1.0.0",
+    "svg-react-loader": "^0.4.6",
     "ts-loader": "^4.0.0",
     "typeface-open-sans": "^0.0.54",
     "typeface-raleway": "^0.0.54",
