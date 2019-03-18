@@ -17573,6 +17573,11 @@ typeface-open-sans@^0.0.54:
   resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.54.tgz#20f5b5ea5c7f95d89dc1f8b2d2b1457680129cee"
   integrity sha512-w6wOd6EicZdZKf0jSU/K3EzEi3zFgvWQSN7NOpRIQI5KeMWmC5Pg/lqtBVJHB0pRChYRmLdhf4h8ROur0A3JZQ==
 
+typeface-raleway@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-raleway/-/typeface-raleway-0.0.54.tgz#f166c517becc81f34d14e72736d28b8923c79c65"
+  integrity sha512-oilrvv0fV+z4eYvfTAl6t9Oq1mE/ZrLDPM71TrcAtqyVb0QzAJ6hQBS+FQcYdHxK2LGQE+gloQUPtwgY2I7WxA==
+
 typeface-titillium-web@^0.0.72:
   version "0.0.72"
   resolved "https://registry.yarnpkg.com/typeface-titillium-web/-/typeface-titillium-web-0.0.72.tgz#f054b962752211309219968ae96a34f1366ecb57"

@@ -31,6 +31,7 @@ const H1 = styled.h1`
   line-height: 1.42857em;
   color: #ffffff;
   padding: 60px 10%;
+  font-weight: 300;
 `
 
 export default () => {

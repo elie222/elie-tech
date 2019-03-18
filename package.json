@@ -65,6 +65,7 @@
     "slash": "1.0.0",
     "ts-loader": "^4.0.0",
     "typeface-open-sans": "^0.0.54",
+    "typeface-raleway": "^0.0.54",
     "typeface-titillium-web": "^0.0.72",
     "typescript": "^2.8.3"
   },
