@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   @media (max-width: 700px) {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
-  @media (max-width: 400px) {
+  @media (max-width: 360px) {
     grid-template-columns: minmax(0, 1fr);
   }
   grid-row-gap: 25px;

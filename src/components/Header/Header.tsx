@@ -18,7 +18,7 @@ const Background = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  padding-bottom: 60px;
+  padding: 0 10% 60px;
 `
 
 const Brand = styled.div`
@@ -30,7 +30,7 @@ const H1 = styled.h1`
   font-size: 36px;
   line-height: 1.42857em;
   color: #ffffff;
-  padding: 60px 10%;
+  padding: 60px 0;
   font-weight: 300;
 `
 
