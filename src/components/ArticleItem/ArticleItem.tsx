@@ -23,7 +23,7 @@ const Wrapper = styled.a`
   width: 100%;
 
   :hover {
-    border: solid 1px #288ade;
+    border: solid 1px var(--deep-sky-blue);
   }
 `
 const Image = styled.img`

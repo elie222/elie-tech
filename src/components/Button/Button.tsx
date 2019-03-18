@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "@emotion/styled"
 
 const white = "#ffffff"
-const blue = "#288ade"
+const blue = "var(--deep-sky-blue)"
 
 const Button = styled.button<ButtonProps>`
   border-radius: 5px;

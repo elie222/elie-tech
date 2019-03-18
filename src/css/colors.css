@@ -1,0 +1,14 @@
+:root {
+  --deep-sky-blue: #288ade;
+}
+
+/*
+  for switching themes:
+  https://medium.com/@harishv6665_49536/theming-with-react-js-or-any-in-minutes-with-css-variables-11d4ebecdb41
+  also, see:
+  https://emotion.sh/docs/emotion-theming
+  https://emotion.sh/docs/typescript#define-a-theme
+*/
+/* html {
+  --primary: var(--deep-sky-blue);
+} */
