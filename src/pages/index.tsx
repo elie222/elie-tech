@@ -16,16 +16,19 @@ const withImagePrefix = (items: any[]) => {
   }))
 }
 
-export default ({ data }: any) => {
-  const articleImages = data.articleImages.edges
-  // const videoImages = data.videoImages.edges
-  // const articles = withImagePrefix(data.allArticlesJson.edges.map(({ node }: any) => node))
-  const articles = data.allArticlesJson.edges.map(({ node }: any) => {
-    const image = articleImages.find(
+const attachImages = (allJson: { edges: any[] }, images: any[]) => {
+  return allJson.edges.map(({ node }: any) => {
+    const image = images.find(
       (img: any) => img.node.childImageSharp.fluid.originalName === node.image,
     )
-    return { ...node, image: image.node.childImageSharp.fluid }
+
+    return { ...node, image: image && image.node.childImageSharp.fluid }
   })
+}
+
+export default ({ data }: any) => {
+  const articles = attachImages(data.allArticlesJson, data.articleImages.edges)
+  const videos = attachImages(data.allVideosJson, data.videoImages.edges)
 
   return (
     <div>
@@ -54,9 +57,7 @@ export default ({ data }: any) => {
       </Section>
       <Section coloredBackground>
         <SubHeading>Videos</SubHeading>
-        <VideoList
-          videos={withImagePrefix(data.allVideosJson.edges.map(({ node }: any) => node))}
-        />
+        <VideoList videos={videos} />
         <GetInTouchButton />
       </Section>
       <Footer>2019 © Steinbock Software Limited</Footer>
@@ -121,17 +122,17 @@ export const pageQuery = graphql`
         }
       }
     }
-    # videoImages: allFile(filter: { relativeDirectory: { eq: "videos" } }) {
-    #   edges {
-    #     node {
-    #       childImageSharp {
-    #         fluid(maxWidth: 500) {
-    #           originalName
-    #           ...GatsbyImageSharpFluid_withWebp_noBase64
-    #         }
-    #       }
-    #     }
-    #   }
-    # }
+    videoImages: allFile(filter: { relativeDirectory: { eq: "videos" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 500) {
+              originalName
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+      }
+    }
   }
 `

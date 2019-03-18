@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     grid-template-columns: minmax(0, 1fr);
   }
   justify-items: center;

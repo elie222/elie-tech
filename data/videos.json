@@ -1,17 +1,17 @@
 [
   {
     "title": "Plasma Cash - Scaling Ethereum",
-    "image": "/images/videos/plasma-cash.jpg",
+    "image": "plasma-cash.jpg",
     "link": "https://www.youtube.com/watch?v=--Sjs_IUvdg"
   },
   {
     "title": "Startup MOJO with Draft Fantasy",
-    "image": "/images/videos/draft-fantasy.jpg",
+    "image": "draft-fantasy.jpg",
     "link": "https://www.youtube.com/watch?v=-wLrO0wMq8s"
   },
   {
     "title": "CryptoFighters Interview, Ethereum",
-    "image": "/images/videos/cryptofighters.jpg",
+    "image": "cryptofighters.jpg",
     "link": "https://www.youtube.com/watch?v=e5mcVfWp1Qw"
   }
 ]
