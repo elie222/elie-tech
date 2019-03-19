@@ -47,10 +47,12 @@ export default (props: TechnologyListProps) => {
             <TechnologyItem
               title={title}
               image={image}
+              description={description}
               showLabel={props.showLabel}
               imageWidth={props.imageWidth}
             />
           </ItemContainer>
+          {/* TODO move this into TechnologyItem */}
           {visibleDescription === title && description && (
             <Description
               title={title}

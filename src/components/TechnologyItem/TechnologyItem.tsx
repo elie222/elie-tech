@@ -2,9 +2,17 @@ import * as React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ hover?: boolean }>`
   display: flex;
   flex-direction: column;
+
+  ${(props) =>
+    props.hover &&
+    `
+    :hover {
+      transform: translate3D(0, -1px, 0) scale(1.02);
+    }
+    `}
 `
 
 const ImageContainer = styled.div`
@@ -39,7 +47,7 @@ export interface TechnologyItemProps extends React.HTMLProps<HTMLDivElement> {
 
 export default (props: TechnologyItemProps) => {
   return (
-    <Wrapper>
+    <Wrapper hover={!!props.description}>
       <ImageContainer>
         <ImageWrapper imageWidth={props.imageWidth}>
           {typeof props.image === "string" ? (
