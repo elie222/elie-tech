@@ -1,31 +1,18 @@
 import * as React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
+import Card from "../Card/Card"
 import favorite from "./favorite.svg"
 
 const MOBILE_BREAK_POINT = 500
 
-const Wrapper = styled.a`
+const Wrapper = styled(Card)`
   display: flex;
   @media (min-width: ${MOBILE_BREAK_POINT + 1}px) {
     height: 124px;
   }
   @media (max-width: ${MOBILE_BREAK_POINT}px) {
     flex-direction: column;
-  }
-  border-radius: 5px;
-  border: solid 1px #ececec;
-  background-color: #f4f7f6;
-  color: #000000;
-  cursor: pointer;
-  text-decoration: none;
-  overflow: hidden;
-  width: 100%;
-  box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39,44,49,0.03) 1px 3px 8px;
-
-  :hover {
-    /* border: solid 1px var(--deep-sky-blue); */
-    transform: translate3D(0, -1px, 0) scale(1.01);
   }
 `
 const ImageWrapper = styled.div`

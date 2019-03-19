@@ -1,24 +1,22 @@
 import * as React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
+import Card from "../Card/Card"
 
-const Wrapper = styled.a`
+const Wrapper = styled(Card)`
   display: flex;
   flex-direction: column;
   text-decoration: none;
   width: 100%;
+  background-color: #fff;
 `
 
 const ImageContainer = styled.div`
-  /* flex: 1;
-  display: flex;
-  align-items: center; */
-  margin-bottom: 10px;
   width: 100%;
 `
 
 const Label = styled.div`
-  text-align: center;
+  padding: 20px;
 `
 
 export interface VideoItemProps extends React.HTMLProps<HTMLDivElement> {
