@@ -21,9 +21,11 @@ const Wrapper = styled.a`
   text-decoration: none;
   overflow: hidden;
   width: 100%;
+  box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39,44,49,0.03) 1px 3px 8px;
 
   :hover {
-    border: solid 1px var(--deep-sky-blue);
+    /* border: solid 1px var(--deep-sky-blue); */
+    transform: translate3D(0, -1px, 0) scale(1.01);
   }
 `
 const ImageWrapper = styled.div`
