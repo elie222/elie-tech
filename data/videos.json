@@ -1,10 +1,5 @@
 [
   {
-    "title": "Plasma Cash: Scaling Ethereum",
-    "image": "plasma-cash.jpg",
-    "link": "https://www.youtube.com/watch?v=--Sjs_IUvdg"
-  },
-  {
     "title": "Startup MOJO with Draft Fantasy",
     "image": "draft-fantasy.jpg",
     "link": "https://www.youtube.com/watch?v=-wLrO0wMq8s"
@@ -13,5 +8,10 @@
     "title": "CryptoFighters Interview, Ethereum",
     "image": "cryptofighters.jpg",
     "link": "https://www.youtube.com/watch?v=e5mcVfWp1Qw"
+  },
+  {
+    "title": "Plasma Cash: Scaling Ethereum",
+    "image": "plasma-cash.jpg",
+    "link": "https://www.youtube.com/watch?v=--Sjs_IUvdg"
   }
 ]
