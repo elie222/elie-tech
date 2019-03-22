@@ -11,7 +11,9 @@ storiesOf("ArticleItem", module)
     const title = text("Title", "Learning Storybook")
     const date = text("Date", "Dec 19")
     const tags = array("Tags", ["JavaScript", "Meteor"])
-    const image = text("Image", "/images/TODO")
+    // this uses gatsby image and expects the image in a specific format
+    // const image = text("Image", "/images/articles/meteor.png")
+    const image = "TODO"
     const likes = number("Likes", 1012)
     const link = text("Link", "#")
 

@@ -3,13 +3,10 @@ import { storiesOf } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 import VideoItem from "./VideoItem"
 
-storiesOf("VideoItem", module)
-  .add("default", () => {
-    const title: string = null // TODO assign real value
-    const image: string = null // TODO assign real value
-    const link: string = null // TODO assign real value
+storiesOf("VideoItem", module).add("default", () => {
+  const title = "Great Video"
+  const image = "TODO"
+  const link = "#"
 
-    return (
-      <VideoItem title={title} image={image} link={link} />
-    )
-  })
+  return <VideoItem title={title} image={image} link={link} />
+})
