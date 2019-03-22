@@ -1,4 +1,5 @@
 const path = require('path')
+const pathToInlineSvg = path.resolve(__dirname, '../src/assets/icons/');
 
 module.exports = ({ config }) => {
   // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
@@ -39,6 +40,22 @@ module.exports = ({ config }) => {
     loader: require.resolve('raw-loader'),
   })
   config.resolve.extensions.push('.md')
+
+  // svg with @svgr
+  const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'))
+  fileLoaderRule.exclude = pathToInlineSvg
+  config.module.rules.push({
+    test: /\.svg$/,
+    include: pathToInlineSvg,
+    use: [
+      {
+        loader: '@svgr/webpack',
+        options: {
+          icon: true,
+        },
+      },
+    ],
+  })
 
   return config
 }

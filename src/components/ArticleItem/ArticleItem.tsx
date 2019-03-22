@@ -2,7 +2,7 @@ import * as React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import Card from "../Card/Card"
-import favorite from "./favorite.svg"
+import Favorite from "../../assets/icons/favorite.svg"
 
 const MOBILE_BREAK_POINT = 500
 
@@ -87,11 +87,10 @@ export default (props: ArticleItemProps) => {
         <Bottom>
           <Likes>
             {props.likes || 0}
-            <LikesIcon src={favorite} />
+            <Favorite />
           </Likes>
           <Tags>{props.tags.map((tag) => `#${tag.toLowerCase()}`).join(", ")}</Tags>
           <PostedAt>
-            {/* {props.date.getMonth() + 1}/{props.date.getFullYear()} */}
             {props.date}
           </PostedAt>
         </Bottom>
