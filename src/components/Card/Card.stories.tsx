@@ -5,5 +5,5 @@ import Card from "./Card"
 
 storiesOf("Card", module)
   .add("default", () => (
-    <Card />
+    <Card>Hello</Card>
   ))

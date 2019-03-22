@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled from "@emotion/styled"
 import GetInTouchButton from "../Button/GetInTouchButton"
-// not working with SB :(
+// not working with SB :( to fix move to asset folder
 // import headerBackground from "./header-background.svg"
 // import headerBackground from './header-background.png'
 // background-image: url(${headerBackground});

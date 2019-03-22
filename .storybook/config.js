@@ -1,5 +1,8 @@
 import { configure } from "@storybook/react";
 import { setOptions } from "@storybook/addon-options";
+import '../src/css/reset.css'
+import '../src/css/styles.css'
+import '../src/css/colors.css'
 
 setOptions({
   name: 'elie.tech Storybook',

@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "@emotion/styled"
 import SubHeading from "../SubHeading/SubHeading"
 import Button from "../Button/Button"
-import closeIcon from "./close.svg"
+import Close from "../../assets/icons/close.svg"
 
 const Wrapper = styled.div`
   background-image: linear-gradient(90deg, #4286f4, #373b44);
@@ -27,7 +27,7 @@ const Text = styled.div`
   margin-bottom: 30px;
 `
 
-const CloseIcon = styled.img`
+const CloseIconContainer = styled.div`
   top: 10%;
   position: absolute;
   right: 10%;
@@ -44,7 +44,9 @@ interface DescriptionProps extends React.HTMLProps<HTMLDivElement> {
 export default (props: DescriptionProps) => {
   return (
     <Wrapper>
-      <CloseIcon src={closeIcon} alt="x" onClick={props.close} />
+      <CloseIconContainer>
+        <Close onClick={props.close} />
+      </CloseIconContainer>
       <WrapperInner>
         <SubHeading color="#ffffff">{props.title}</SubHeading>
         <Text>{props.description}</Text>
