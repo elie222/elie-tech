@@ -4,5 +4,9 @@ import { action } from "@storybook/addon-actions"
 import Button from "./Button"
 
 storiesOf("Button", module)
-  .add("default", () => <Button>GET IN TOUCH</Button>)
-  .add("full", () => <Button full>GET IN TOUCH</Button>)
+  .add("default", () => <Button onClick={action("clicked")}>CLICK ME</Button>)
+  .add("full", () => (
+    <Button full onClick={action("clicked")}>
+      CLICK ME
+    </Button>
+  ))
