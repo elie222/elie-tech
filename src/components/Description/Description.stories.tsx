@@ -13,5 +13,5 @@ storiesOf("Description", module)
       "We built a really complex project in a week for this awesome client!",
     )
 
-    return <Description title={title} description={description} close={() => null} />
+    return <Description title={title} description={description} close={action("onClose")} />
   })
