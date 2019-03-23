@@ -57,5 +57,17 @@ module.exports = ({ config }) => {
     ],
   })
 
+  // https://github.com/storybooks/storybook/tree/master/addons/storysource#parser
+  config.module.rules.push({
+    test: /\.stories\.tsx?$/,
+    loaders: [
+      {
+        loader: require.resolve('@storybook/addon-storysource/loader'),
+        options: { parser: 'typescript' },
+      },
+    ],
+    enforce: 'pre',
+  });
+
   return config
 }
