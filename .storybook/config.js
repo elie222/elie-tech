@@ -1,6 +1,7 @@
 import { configure, addDecorator } from '@storybook/react'
 import { setOptions } from '@storybook/addon-options'
 import { withA11y } from '@storybook/addon-a11y'
+import { withKnobs } from '@storybook/addon-knobs'
 import '../src/css/reset.css'
 import '../src/css/styles.css'
 import '../src/css/colors.css'
@@ -33,3 +34,4 @@ window.___navigate = pathname => {
 configure(loadStories, module)
 
 addDecorator(withA11y)
+addDecorator(withKnobs)
