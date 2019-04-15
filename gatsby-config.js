@@ -4,7 +4,8 @@ module.exports = {
     siteUrl: `https://elie.tech`,
     description: `High-end Full Stack Software Development. Based in Tel Aviv.`,
     name: `Elie Steinbock`,
-    twitter: `@elie2222`
+    twitter: `@elie2222`,
+    image: `/images/favicon/favicon.svg`
     // GoogleVerification: `abcdefz`,
     // disqus: `gatsby-typescript`
   },

@@ -2,12 +2,10 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
 
-import icon from "../../static/images/favicon/favicon.svg"
-
 const SEO = (props: any) => {
   const {
     site: {
-      siteMetadata: { siteUrl, title, description, twitter },
+      siteMetadata: { siteUrl, title, description, twitter, image: imagePath },
     },
   } = useStaticQuery(graphql`
     query SiteMetadata {
@@ -18,12 +16,13 @@ const SEO = (props: any) => {
           siteUrl
           name
           twitter
+          image
         }
       }
     }
   `)
 
-  const image = `${siteUrl}${icon}`
+  const image = `${siteUrl}${imagePath}`
 
   return (
     <Helmet>
