@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `elie.tech - full stack software development in Tel Aviv`,
+    title: `elie.tech: Full stack software development based in Tel Aviv`,
     siteUrl: `https://elie.tech`,
     description: `High-end full stack software development based in Tel Aviv.`,
     name: `Elie Steinbock`,
