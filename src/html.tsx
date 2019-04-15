@@ -25,6 +25,8 @@ export default (props: HtmlProps) => {
       <head>
         {props.headComponents}
         <title>elie.tech</title>
+        <meta name="description" content="High-end Full Stack Software Development" />
+        <meta name="author" content="Elie Steinbock" />
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
