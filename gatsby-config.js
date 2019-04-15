@@ -5,7 +5,7 @@ module.exports = {
     description: `High-end Full Stack Software Development. Based in Tel Aviv.`,
     name: `Elie Steinbock`,
     twitter: `@elie2222`,
-    image: `/images/favicon/favicon.svg`
+    image: `/images/favicon/elie-tech-og-image.png`
     // GoogleVerification: `abcdefz`,
     // disqus: `gatsby-typescript`
   },
