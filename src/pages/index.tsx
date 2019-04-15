@@ -32,13 +32,13 @@ export default ({ data }: any) => {
   return (
     <div>
       <Header />
-      <Section>
-        <SubHeading>Favourite Technologies</SubHeading>
-        <TechnologyList technologies={technologies} showLabel imageWidth={120} />
-      </Section>
-      <Section coloredBackground>
+      <Section >
         <SubHeading>Previous Projects</SubHeading>
         <TechnologyList technologies={projects} showLabel={false} imageWidth={180} />
+      </Section>
+      <Section coloredBackground>
+        <SubHeading>Favourite Technologies</SubHeading>
+        <TechnologyList technologies={technologies} showLabel imageWidth={120} />
       </Section>
       <Section>
         <SubHeading>Articles</SubHeading>

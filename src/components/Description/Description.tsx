@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "@emotion/styled"
 import SubHeading from "../SubHeading/SubHeading"
 import Button from "../Button/Button"
-import Close from "../../assets/icons/close.svg"
+import { ReactComponent as Close } from "../../assets/icons/close.svg"
 
 const Wrapper = styled.div`
   background-image: linear-gradient(90deg, #4286f4, #373b44);

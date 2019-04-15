@@ -2,7 +2,7 @@ import * as React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import Card from "../Card/Card"
-import Favorite from "../../assets/icons/favorite.svg"
+import { ReactComponent as Favorite } from "../../assets/icons/favorite.svg"
 
 const MOBILE_BREAK_POINT = 500
 
@@ -50,11 +50,6 @@ const Likes = styled.div`
   display: flex;
   align-items: center;
 `
-const LikesIcon = styled.img`
-  width: 16px;
-  height: 16px;
-  margin: 0 5px;
-`
 const Tags = styled.div`
   flex: 1;
   margin: 0 10px;
@@ -90,9 +85,7 @@ export default (props: ArticleItemProps) => {
             <Favorite />
           </Likes>
           <Tags>{props.tags.map((tag) => `#${tag.toLowerCase()}`).join(", ")}</Tags>
-          <PostedAt>
-            {props.date}
-          </PostedAt>
+          <PostedAt>{props.date}</PostedAt>
         </Bottom>
       </Main>
     </Wrapper>
