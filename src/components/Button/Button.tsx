@@ -14,6 +14,7 @@ const Button = styled.button<ButtonProps>`
   letter-spacing: 2.8px;
   color: ${(props) => (props.full ? white : blue)};
   padding: 10px 70px;
+  cursor: pointer;
 
   :hover {
     background-color: ${(props) =>

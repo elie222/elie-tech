@@ -10,7 +10,7 @@ const Wrapper = styled.div<{ hover?: boolean }>`
     props.hover &&
     `
     :hover {
-      transform: translate3D(0, -1px, 0) scale(1.02);
+      transform: translate3D(0, -2px, 0);
     }
     `}
 `

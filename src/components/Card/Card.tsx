@@ -12,7 +12,8 @@ const Card = styled.a`
   box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
 
   :hover {
-    transform: translate3D(0, -1px, 0) scale(1.01);
+    transform: translate3D(0, -2px, 0);
+    box-shadow: rgba(39, 44, 49, 0.1) 8px 24px 38px, rgba(39, 44, 49, 0.1) 1px 3px 8px;
   }
 `
 
