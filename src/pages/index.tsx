@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 import Header from "../components/Header/Header"
 import SubHeading from "../components/SubHeading/SubHeading"
 import Section from "../components/Section/Section"
@@ -31,8 +32,9 @@ export default ({ data }: any) => {
 
   return (
     <div>
+      <SEO />
       <Header />
-      <Section >
+      <Section>
         <SubHeading>Previous Projects</SubHeading>
         <TechnologyList technologies={projects} showLabel={false} imageWidth={180} />
       </Section>

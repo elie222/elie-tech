@@ -1,6 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `elie.tech`
+    title: `elie.tech`,
+    siteUrl: `https://elie.tech`,
+    description: `High-end Full Stack Software Development. Based in Tel Aviv.`,
+    name: `Elie Steinbock`,
+    twitter: `@elie2222`
     // GoogleVerification: `abcdefz`,
     // disqus: `gatsby-typescript`
   },
@@ -96,6 +100,8 @@ module.exports = {
       }
     },
 
-    'gatsby-plugin-svgr'
+    `gatsby-plugin-svgr`,
+
+    `gatsby-plugin-react-helmet`
   ]
 }
