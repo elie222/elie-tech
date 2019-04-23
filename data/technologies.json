@@ -1,15 +1,15 @@
 [
   { "title": "JavaScript", "image": "javascript.jpg" },
   { "title": "TypeScript", "image": "typescript.png" },
-  { "title": "React", "image": "react.svg" },
+  { "title": "React", "image": "react.png" },
   { "title": "NodeJS", "image": "node.png" },
   { "title": "GraphQL", "image": "graphql.png" },
   { "title": "Elixir", "image": "elixir.png" },
   { "title": "Solidity", "image": "solidity.png" },
-  { "title": "MongoDB", "image": "mongodb.jpg" },
-  { "title": "NGINX", "image": "nginx.png" },
-  { "title": "Ansible", "image": "ansible.png" },
-  { "title": "Docker", "image": "docker.png" },
+  { "title": "MongoDB", "image": "mongodb.png" },
   { "title": "Storybook", "image": "storybook.svg" },
-  { "title": "Jest", "image": "jest.png" }
+  { "title": "Jest", "image": "jest.png" },
+  { "title": "Docker", "image": "docker.png" },
+  { "title": "NGINX", "image": "nginx.png" },
+  { "title": "Ansible", "image": "ansible.png" }
 ]

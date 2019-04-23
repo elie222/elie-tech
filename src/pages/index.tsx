@@ -35,12 +35,12 @@ export default ({ data }: any) => {
       <SEO />
       <Header />
       <Section>
-        <SubHeading>Previous Projects</SubHeading>
+        <SubHeading>Projects</SubHeading>
         <TechnologyList technologies={projects} showLabel={false} imageWidth={180} />
       </Section>
       <Section coloredBackground>
         <SubHeading>Favourite Technologies</SubHeading>
-        <TechnologyList technologies={technologies} showLabel imageWidth={120} />
+        <TechnologyList technologies={technologies} showLabel imageWidth={150} />
       </Section>
       <Section>
         <SubHeading>Articles</SubHeading>

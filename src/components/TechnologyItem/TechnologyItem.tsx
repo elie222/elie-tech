@@ -61,7 +61,7 @@ export default (props: TechnologyItemProps) => {
         looks better with this removed.
         use hover behaviour to give more info about the tech in question and its name.
       */}
-      {props.showLabel && <Label>{props.title}</Label>}
+      {/* {props.showLabel && <Label>{props.title}</Label>} */}
     </Wrapper>
   )
 }
