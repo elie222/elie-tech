@@ -1,7 +1,6 @@
-import * as React from "react"
 import styled from "@emotion/styled"
 
-const Footer = styled.div`
+const Footer = styled.footer`
   background: #1a1a1a;
   padding: 27px 15px;
   font-size: 16px;
