@@ -1,5 +1,5 @@
 const path = require('path')
-const pathToInlineSvg = path.resolve(__dirname, '../src/assets/icons/');
+const pathToInlineSvg = path.resolve(__dirname, '../src/assets/icons/')
 
 module.exports = ({ config }) => {
   // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
@@ -41,20 +41,25 @@ module.exports = ({ config }) => {
   })
   config.resolve.extensions.push('.md')
 
-  // svg with @svgr
-  const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'))
-  fileLoaderRule.exclude = pathToInlineSvg
+  // remove svg from existing rule
+  config.module.rules = config.module.rules.map(rule => {
+    if (
+      String(rule.test) ===
+      String(/\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/)
+    ) {
+      return {
+        ...rule,
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
+      }
+    }
+
+    return rule
+  })
+
+  // use svgr for svg files
   config.module.rules.push({
     test: /\.svg$/,
-    include: pathToInlineSvg,
-    use: [
-      {
-        loader: '@svgr/webpack',
-        options: {
-          icon: true,
-        },
-      },
-    ],
+    use: ['@svgr/webpack', 'url-loader'],
   })
 
   // https://github.com/storybooks/storybook/tree/master/addons/storysource#parser
@@ -67,7 +72,7 @@ module.exports = ({ config }) => {
       },
     ],
     enforce: 'pre',
-  });
+  })
 
   return config
 }
