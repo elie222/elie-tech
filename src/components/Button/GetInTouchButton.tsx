@@ -1,8 +1,7 @@
 import * as React from "react"
 import Button from "./Button"
 
-// broken up to make scraping harder
-const contact = () => window.open("mailto:elie" + "steinbock@" + "gmail.com", "_blank")
+const contact = () => window.open("mailto:hi@elie.tech?Subject=Development%20project", "_blank")
 
 export default (props: any) => {
   return (
