@@ -40,7 +40,7 @@ export default () => {
       <H1>
         Hey, my name is Eliezer Steinbock.
         <br />
-        I’m a full stack freelance developer living in Tel Aviv.
+        I’m a full stack consultant living in Tel Aviv.
       </H1>
       <GetInTouchButton transparentHover />
     </Background>
