@@ -1,5 +1,29 @@
 [
   {
+    "title": "How To Win A Hackathon",
+    "image": "shopitt.jpg",
+    "tags": ["reactnative", "javascript", "nodejs"],
+    "likes": 191,
+    "link": "https://medium.com/@eliezer/how-to-win-a-hackathon-c50413500741",
+    "date": "Aug '19"
+  },
+  {
+    "title": "Learning From Failure",
+    "image": "mistakes.png",
+    "tags": ["startup", "life"],
+    "likes": 222,
+    "link": "https://medium.com/@eliezer/learning-from-mistakes-be5ae5e9dca7",
+    "date": "Jul '19"
+  },
+  {
+    "title": "How We Write Full Stack JavaScript Apps",
+    "image": "full-stack-javascript.jpg",
+    "tags": ["javascript", "nodejs", "react"],
+    "likes": 1455,
+    "link": "https://medium.com/@eliezer/how-writing-simple-javascript-got-us-6200-github-stars-in-a-single-day-420b17b4cff4",
+    "date": "Jun '19"
+  },
+  {
     "title": "How I Built This: IsraelVC — Gatsby, Google Sheets, Now Serverless",
     "image": "israelvc.png",
     "tags": ["javascript", "gatsby", "serverless"],
