@@ -38,5 +38,10 @@
     "image": "sov.svg",
     "description": "On February 26, 2018 the Republic of the Marshall Islands issued the Sovereign Currency Act of 2018 introducing a new blockchain based currency called the Sovereign (‘SOV’) as “legal tender of the Marshall Islands for all debts, public charges, taxes and dues.” I worked as a consultant on this project helping to develop the currency.",
     "link": "https://www.sov.global/"
+  },
+  {
+    "title": "qPrivacy",
+    "image": "qprivacy.svg",
+    "description": "qPrivacy is an early stage startup that enables enterprises to protect their customers' private data. A team of elie.tech developers built their complex internal dashboard using React, TypeScript, Node.js, MongoDB and Docker."
   }
 ]
