@@ -42,6 +42,16 @@
   {
     "title": "qPrivacy",
     "image": "qprivacy.svg",
-    "description": "qPrivacy is an early stage startup that enables enterprises to protect their customers' private data. A team of elie.tech developers built their complex internal dashboard using React, TypeScript, Node.js, MongoDB and Docker."
+    "description": "qPrivacy is an early stage startup that enables enterprises to protect their customers' private data. A team of elie.tech developers built their complex internal dashboard using React, TypeScript, Node.js, MongoDB, GraphQL and Docker."
+  },
+  {
+    "title": "FundGuard",
+    "image": "fund-guard.png",
+    "description": "FundGuard is revolutionising hedge fund management software. It works with some of America's largest financial institutes. The work involved React, TypeScript, Flow, Node.js, and GraphQL as part of a large development team."
+  },
+  {
+    "title": "Aquant",
+    "image": "aquant.png",
+    "description": "Aquant needed mobile app quickly. React Native and TypeScript were used for an extremely quick turnaround to meet their tight deadline."
   }
 ]
