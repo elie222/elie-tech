@@ -3,7 +3,7 @@
     "title": "How To Win A Hackathon",
     "image": "shopitt.jpg",
     "tags": ["reactnative", "javascript", "nodejs"],
-    "likes": 389,
+    "likes": 491,
     "link": "https://medium.com/@eliezer/how-to-win-a-hackathon-c50413500741",
     "date": "Aug '19"
   },
@@ -19,7 +19,7 @@
     "title": "How We Write Full Stack JavaScript Apps",
     "image": "full-stack-javascript.jpg",
     "tags": ["javascript", "nodejs", "react"],
-    "likes": 1455,
+    "likes": 1513,
     "link": "https://medium.com/@eliezer/how-writing-simple-javascript-got-us-6200-github-stars-in-a-single-day-420b17b4cff4",
     "date": "Jun '19"
   },
@@ -35,7 +35,7 @@
     "title": "TypeORM MongoDB Review",
     "image": "typeorm.png",
     "tags": ["javascript", "nodejs", "mongodb"],
-    "likes": 240,
+    "likes": 363,
     "link": "https://medium.com/articode/typeorm-mongodb-review-8855903228b1",
     "date": "Apr '19"
   },
@@ -43,7 +43,7 @@
     "title": "Should I use React Native?",
     "image": "react-native.png",
     "tags": ["javascript", "reactnative", "react"],
-    "likes": 723,
+    "likes": 1039,
     "link": "https://medium.com/articode/should-i-use-react-native-edc98303f723",
     "date": "Mar '19"
   },
