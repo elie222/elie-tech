@@ -51,7 +51,7 @@ export default ({ data }: any) => {
         <VideoList videos={videos} />
         <GetInTouchButton />
       </Section>
-      <Footer>2019 © Steinbock Software Limited</Footer>
+      <Footer>{new Date().getFullYear()} © Steinbock Software Limited</Footer>
     </div>
   )
 }

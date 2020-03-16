@@ -34,7 +34,7 @@ export default ({ data }: any) => {
         <TechnologyList technologies={technologies} showLabel imageWidth={150} />
         <GetInTouchButton />
       </Section>
-      <Footer>2019 © Steinbock Software Limited</Footer>
+      <Footer>{new Date().getFullYear()} © Steinbock Software Limited</Footer>
     </div>
   )
 }
