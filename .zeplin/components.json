@@ -1,0 +1,27 @@
+{
+  "plugins": [
+    {
+      "name": "@zeplin/cli-connect-storybook-plugin",
+      "config": {
+        "url": "http://localhost:9009",
+        "startScript": "storybook"
+      }
+    }
+  ],
+  "projects": ["5c87b542d09fc1389cd04c19"],
+  "styleguides": [],
+  "components": [
+    {
+      "path": "src/components/Button/Button.tsx",
+      "zeplinNames": ["Button/Primary", "Button/Secondary"],
+      "storybook": {
+        "kind": "Design System/Button",
+        "stories": ["default", "full"]
+      }
+    },
+    {
+      "path": "src/components/ArticleList/ArticleList.tsx",
+      "zeplinNames": ["Article/Regular"]
+    }
+  ]
+}
