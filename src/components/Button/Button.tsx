@@ -4,6 +4,13 @@ import styled from "@emotion/styled"
 const white = "#ffffff"
 const blue = "var(--deep-sky-blue)"
 
+interface ButtonProps {
+  full?: boolean
+  transparentHover?: boolean
+  children?: React.ReactNode
+  onClick?: (e: any) => void
+}
+
 const Button = styled.button<ButtonProps>`
   border-radius: 5px;
   border: solid 3px ${blue};
@@ -23,11 +30,6 @@ const Button = styled.button<ButtonProps>`
     color: ${(props) => (props.full ? blue : white)};
   }
 `
-
-interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
-  full?: boolean
-  transparentHover?: boolean
-}
 
 export default (props: ButtonProps) => {
   return <Button {...props}>{props.children}</Button>
