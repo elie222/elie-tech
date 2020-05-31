@@ -2,7 +2,7 @@
   "name": "gatsby-starter",
   "version": "1.0.0",
   "description": "elie.tech website",
-  "author": "elie222 <elie@dappworks.co>",
+  "author": "elie222 <hi@elie.tech>",
   "license": "MIT",
   "scripts": {
     "start": "gatsby develop",
