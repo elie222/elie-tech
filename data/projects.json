@@ -52,6 +52,16 @@
   {
     "title": "Aquant",
     "image": "aquant.png",
-    "description": "Aquant needed mobile app quickly. React Native and TypeScript were used for an extremely quick turnaround to meet their tight deadline."
+    "description": "Aquant needed a mobile app quickly. React Native and TypeScript were used for an extremely quick turnaround to meet their tight deadline."
+  },
+  {
+    "title": "Theator",
+    "image": "theator.svg",
+    "description": "I joined Theator as a consultant to help complete their React Native app and various issues they were facing."
+  },
+  {
+    "title": "Spark",
+    "image": "spark.png",
+    "description": "This project includes React, Node.js, Nest, Postgres and GraphQL. Responsibilities included leading two post-bootcamp interns."
   }
 ]

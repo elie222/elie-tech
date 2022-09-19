@@ -6,9 +6,7 @@ import SubHeading from "../components/SubHeading/SubHeading"
 import Section from "../components/Section/Section"
 import Footer from "../components/Footer/Footer"
 import GetInTouchButton from "../components/Button/GetInTouchButton"
-import ArticleList from "../components/ArticleList/ArticleList"
 import TechnologyList from "../components/TechnologyList/TechnologyList"
-import VideoList from "../components/VideoList/VideoList"
 
 const attachImages = (allJson: { edges: any[] }, images: any[]) => {
   return allJson.edges.map(({ node }: any) => {
@@ -26,29 +24,14 @@ const attachImages = (allJson: { edges: any[] }, images: any[]) => {
 
 export default ({ data }: any) => {
   const technologies = attachImages(data.allTechnologiesJson, data.technologyImages.edges)
-  const projects = attachImages(data.allProjectsJson, data.projectImages.edges)
-  const articles = attachImages(data.allArticlesJson, data.articleImages.edges)
-  const videos = attachImages(data.allVideosJson, data.videoImages.edges)
 
   return (
     <div>
       <SEO />
       <Header />
-      <Section>
-        <SubHeading>Projects</SubHeading>
-        <TechnologyList technologies={projects} showLabel={false} imageWidth={180} />
-      </Section>
       <Section coloredBackground>
-        <SubHeading>Favourite Technologies</SubHeading>
+        <SubHeading>Technologies I Use</SubHeading>
         <TechnologyList technologies={technologies} showLabel imageWidth={150} />
-      </Section>
-      <Section>
-        <SubHeading>Articles</SubHeading>
-        <ArticleList articles={articles} />
-      </Section>
-      <Section coloredBackground>
-        <SubHeading>Videos</SubHeading>
-        <VideoList videos={videos} />
         <GetInTouchButton />
       </Section>
       <Footer>{new Date().getFullYear()} © Steinbock Software Limited</Footer>
@@ -81,50 +64,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allProjectsJson {
-      edges {
-        node {
-          id
-          image
-          title
-          description
-          link
-        }
-      }
-    }
-    allArticlesJson {
-      edges {
-        node {
-          id
-          title
-          image
-          tags
-          likes
-          link
-          date
-        }
-      }
-    }
-    allVideosJson {
-      edges {
-        node {
-          id
-          title
-          image
-          link
-        }
-      }
-    }
     technologyImages: allFile(filter: { relativeDirectory: { eq: "technologies" } }) {
-      ...Images
-    }
-    projectImages: allFile(filter: { relativeDirectory: { eq: "projects" } }) {
-      ...Images
-    }
-    articleImages: allFile(filter: { relativeDirectory: { eq: "articles" } }) {
-      ...Images
-    }
-    videoImages: allFile(filter: { relativeDirectory: { eq: "videos" } }) {
       ...Images
     }
   }
