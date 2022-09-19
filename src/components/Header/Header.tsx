@@ -38,9 +38,9 @@ export default () => {
     <Background>
       <Brand>elie.tech</Brand>
       <H1>
-        Hey, my name is Eliezer Steinbock.
+        Hey, my name is Elie.
         <br />
-        I’m a full stack freelance developer based out of Tel Aviv.
+        This is my 2019 site. Update coming soon 🤞
       </H1>
       <GetInTouchButton transparentHover />
     </Background>
